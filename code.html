@@ -212,7 +212,7 @@
                                     <p class="text-[11px] text-textMuted mt-1">SUPPORTED FORMATS: PNG, JPG, JPEG, HEIC</p>
                                 </div>
                                 <input id="file-upload" type="file" accept="image/*,image/heic" class="hidden" onchange="uploadPhoto(event, 0)"/>
-                                <input id="camera-upload" type="file" accept="image/*" capture="user" class="hidden" onchange="uploadPhoto(event, 0)"/>
+                                <input id="camera-upload" type="file" accept="image/*" capture="environment" class="hidden" onchange="uploadPhoto(event, 0)"/>
                             </div>
                             
                             <!-- Upload and Capture Triggers -->
@@ -1250,7 +1250,7 @@
                                 TAKE PHOTO
                             </button>
                             <input id="crew-upload-${index}" type="file" accept="image/*,image/heic" class="hidden" onchange="uploadPhoto(event, ${index})"/>
-                            <input id="crew-camera-${index}" type="file" accept="image/*" capture="user" class="hidden" onchange="uploadPhoto(event, ${index})"/>
+                            <input id="crew-camera-${index}" type="file" accept="image/*" capture="environment" class="hidden" onchange="uploadPhoto(event, ${index})"/>
                         </div>
                     </div>
                 `;
@@ -2225,7 +2225,7 @@
         let activeStream = null;
         let activeCrewIndex = 0;
 
-        async function openCamera(crewIndex = 0) {
+        function openCamera(crewIndex = 0) {
             hideError();
             activeCrewIndex = crewIndex;
 
@@ -2237,12 +2237,17 @@
                 const inputId = (crewIndex === 0) ? 'camera-upload' : `crew-camera-${crewIndex}`;
                 const fileInput = document.getElementById(inputId);
                 if (fileInput) {
+                    // Synchronously invoke click to guarantee user-gesture propagation
                     fileInput.click();
                     return;
                 }
             }
 
             // Desktop / Fallback custom webcam modal using getUserMedia
+            openDesktopWebcam();
+        }
+
+        async function openDesktopWebcam() {
             const modal = document.getElementById('camera-modal');
             const video = document.getElementById('webcam-preview');
             const loading = document.getElementById('webcam-loading');
