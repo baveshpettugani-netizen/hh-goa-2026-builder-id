@@ -1,0 +1,18 @@
+# Environment secrets
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Old backup directories (not part of deployment)
+BACKUP_WORKING_VERSION/
+_http_old/
+
+# Dev scratch files
+scratch_test.py
+
+# OS files
+.DS_Store
+Thumbs.db

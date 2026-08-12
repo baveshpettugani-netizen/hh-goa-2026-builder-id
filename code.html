@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <!-- SEO Meta Tags -->
+    <title>HH Goa 2026 — Builder ID Collectible</title>
+    <meta name="description" content="Generate your custom HH Goa 2026 Builder ID. Tell us what you build, upload your photo, and claim your developer identity.">
+    
+    <!-- Open Graph Metadata (Social Previews) -->
+    <meta property="og:title" content="HH Goa 2026 — Builder ID"/>
+    <meta property="og:description" content="Turn your photo into your HH Goa 2026 builder identity. Ready to download and share."/>
+    <meta property="og:image" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="HH Goa 2026 — Builder ID"/>
+    <meta name="twitter:description" content="Turn your photo into your HH Goa 2026 builder identity. Ready to download and share."/>
+    <meta name="twitter:image" content=""/>
+    
+    <!-- Styling Framework & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Dependencies: HEIC Converter & QR Code Generator -->
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: "#06070a",
+                        cardDark: "#0c0e14",
+                        borderDark: "#1a1e28",
+                        textLight: "#f3f4f6",
+                        textMuted: "#9ca3af",
+                        brandBlue: "#0052ff",
+                        brandCyan: "#00f0ff"
+                    },
+                    fontFamily: {
+                        sora: ["Sora", "sans-serif"],
+                        hanken: ["Hanken Grotesk", "sans-serif"],
+                        mono: ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Tech Grid Background */
+        .tech-grid {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+        
+        /* Fine Noise Grain Overlay */
+        .noise-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            pointer-events: none;
+        }
+
+        /* 3D Card Hover Perspective */
+        .perspective-card-container {
+            perspective: 1200px;
+        }
+        
+        .tilt-card {
+            transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+            transform-style: preserve-3d;
+        }
+
+        /* Holographic Card Overlay */
+        .holo-overlay {
+            background: linear-gradient(
+                135deg, 
+                rgba(255, 255, 255, 0.08) 0%, 
+                rgba(255, 255, 255, 0.0) 40%, 
+                rgba(0, 240, 255, 0.03) 60%, 
+                rgba(0, 82, 255, 0.06) 100%
+            );
+            mix-blend-mode: overlay;
+        }
+
+        /* LED pulsing animation */
+        .led-pulse {
+            animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 2px var(--glow-color, #00f0ff)); }
+            50% { opacity: .4; transform: scale(0.9); filter: drop-shadow(0 0 0px var(--glow-color, #00f0ff)); }
+        }
+
+        /* Scanline Animation */
+        .scanlines {
+            position: relative;
+            overflow: hidden;
+        }
+        .scanlines::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+            z-index: 2;
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+            opacity: 0.12;
+        }
+
+        /* Custom Shimmer Loading Bar */
+        @keyframes loading-progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        .animate-progress {
+            animation: loading-progress 0.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+        }
+
+        /* Theme Accents (Centralized Tokens) */
+        .theme-neural { --accent-color: #00f0ff; --bg-card: #080d1a; --glow-color: #00f0ff; }
+        .theme-pixel { --accent-color: #ff8fe3; --bg-card: #15081a; --glow-color: #ff8fe3; }
+        .theme-kernel { --accent-color: #39ff14; --bg-card: #07150a; --glow-color: #39ff14; }
+        .theme-protocol { --accent-color: #ffd700; --bg-card: #1a1608; --glow-color: #ffd700; }
+        .theme-hardware { --accent-color: #ff6b35; --bg-card: #1a0f08; --glow-color: #ff6b35; }
+        .theme-chaos { --accent-color: #ff3366; --bg-card: #1a080d; --glow-color: #ff3366; }
+    </style>
+</head>
+<body class="bg-obsidian text-textLight font-hanken min-h-screen relative flex flex-col items-center overflow-x-hidden selection:bg-brandBlue selection:text-white">
+    <!-- Overlay textures -->
+    <div class="absolute inset-0 tech-grid pointer-events-none z-0"></div>
+    <div class="absolute inset-0 noise-overlay pointer-events-none z-0"></div>
+
+    <!-- Navigation Header -->
+    <header class="w-full border-b border-borderDark/40 bg-obsidian/80 backdrop-blur-md fixed top-0 left-0 z-40 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3 font-mono text-xs tracking-widest text-brandCyan">
+            <span class="material-symbols-outlined text-sm led-pulse" style="--glow-color: #00f0ff">fingerprint</span>
+            <span>HHGOA2026 // IDENTITY_PROTOCOL_v1.0</span>
+        </div>
+        <div class="hidden sm:flex items-center gap-6 font-mono text-[10px] tracking-wider text-textMuted">
+            <span>LOC: GOA / INDIA</span>
+            <span class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 led-pulse" style="--glow-color: #10b981"></span>
+                SYSTEMS OPERATIONAL
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Workspace (Editor Flow) -->
+    <main id="generator-view" class="w-full max-w-7xl pt-28 pb-20 px-6 flex-1 flex flex-col items-center justify-start z-10 relative">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 mt-4 items-start">
+            
+            <!-- Left Panel: Design Controls -->
+            <section class="lg:col-span-7 flex flex-col gap-8">
+                
+                <!-- Hero & Brand -->
+                <div class="flex flex-col gap-3">
+                    <div class="inline-flex items-center gap-2 border border-brandBlue/30 bg-brandBlue/10 text-brandCyan font-mono text-[10px] uppercase tracking-widest px-3 py-1 rounded-full w-fit">
+                        NO LOGIN · NO SIGNUP · JUST BUILD
+                    </div>
+                    <h2 class="font-sora text-6xl md:text-7xl font-extrabold tracking-tight leading-none text-textLight">
+                        MEET THE<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandCyan">BUILDER</span>
+                    </h2>
+                    <p class="text-textMuted text-base md:text-lg max-w-xl">
+                        Upload a photo. Tell us what you build. Instantly claim your HH Goa 2026 Builder ID.
+                    </p>
+                </div>
+
+                <!-- Mode Switcher (Solo / Crew) -->
+                <div class="flex items-center gap-1 bg-cardDark border border-borderDark/60 p-1.5 rounded-lg w-fit">
+                    <button id="toggle-solo" class="px-5 py-2 font-mono text-xs tracking-wider uppercase rounded-md bg-brandBlue text-white font-bold transition-all" onclick="setMode('solo')">
+                        SOLO GENERATOR
+                    </button>
+                    <button id="toggle-crew" class="px-5 py-2 font-mono text-xs tracking-wider uppercase rounded-md text-textMuted hover:text-textLight transition-all" onclick="setMode('crew')">
+                        CREW MODE
+                    </button>
+                </div>
+
+                <hr class="border-borderDark/40"/>
+
+                <!-- Interactive Form -->
+                <div class="flex flex-col gap-8">
+                    
+                    <!-- Solo Mode Form Fields -->
+                    <div id="form-solo" class="flex flex-col gap-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="flex flex-col gap-2">
+                                <label class="font-mono text-xs tracking-widest text-textMuted uppercase">01 / Your Name</label>
+                                <input id="input-name" type="text" value="ALEX CHEN" class="bg-transparent border-0 border-b-2 border-borderDark focus:border-brandBlue focus:ring-0 text-2xl font-sora font-semibold text-textLight px-0 py-2 placeholder-neutral-700 transition-colors w-full" placeholder="BAVESH" oninput="syncCardData()"/>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="font-mono text-xs tracking-widest text-textMuted uppercase">02 / What do you build? (Stack/Role)</label>
+                                <input id="input-role" type="text" value="AI/ML DEVELOPER" class="bg-transparent border-0 border-b-2 border-borderDark focus:border-brandBlue focus:ring-0 text-2xl font-sora font-semibold text-textLight px-0 py-2 placeholder-neutral-700 transition-colors w-full" placeholder="AI / ML DEVELOPER" oninput="syncCardData()"/>
+                            </div>
+                        </div>
+
+                        <!-- Dropzone Photo Upload Area -->
+                        <div class="flex flex-col gap-3">
+                            <label class="font-mono text-xs tracking-widest text-textMuted uppercase">03 / Builder Photo</label>
+                            <div id="dropzone" class="border border-dashed border-borderDark/80 hover:border-brandCyan/80 bg-cardDark/40 rounded-xl p-8 flex flex-col items-center justify-center gap-4 cursor-pointer transition-all relative overflow-hidden group">
+                                <div class="absolute inset-0 tech-grid opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                                <span class="material-symbols-outlined text-4xl text-brandBlue group-hover:text-brandCyan transition-colors">add_a_photo</span>
+                                <div class="flex flex-col items-center text-center">
+                                    <p class="font-mono text-xs tracking-wider uppercase text-textLight font-semibold">DROP / TAP / TAKE PHOTO</p>
+                                    <p class="text-[11px] text-textMuted mt-1">SUPPORTED FORMATS: PNG, JPG, JPEG, HEIC</p>
+                                </div>
+                                <input id="file-upload" type="file" accept="image/*,image/heic" class="hidden" onchange="uploadPhoto(event, 0)"/>
+                                <input id="camera-upload" type="file" accept="image/*" capture="user" class="hidden" onchange="uploadPhoto(event, 0)"/>
+                            </div>
+                            
+                            <!-- Upload and Capture Triggers -->
+                            <div class="flex gap-4 w-full">
+                                <button type="button" class="flex-1 border border-borderDark/60 hover:border-brandBlue/60 bg-cardDark hover:bg-cardDark/85 text-textLight py-3.5 px-4 rounded-xl font-mono text-[11px] uppercase tracking-wider transition-all flex items-center justify-center gap-2" onclick="document.getElementById('file-upload').click()">
+                                    <span class="material-symbols-outlined text-sm">upload_file</span>
+                                    <span>Upload File</span>
+                                </button>
+                                <button type="button" class="flex-1 border border-borderDark/60 hover:border-brandCyan/60 bg-cardDark hover:bg-cardDark/85 text-textLight py-3.5 px-4 rounded-xl font-mono text-[11px] uppercase tracking-wider transition-all flex items-center justify-center gap-2" onclick="document.getElementById('camera-upload').click()">
+                                    <span class="material-symbols-outlined text-sm">photo_camera</span>
+                                    <span>Take Photo</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Crew Mode Form Fields -->
+                    <div id="form-crew" class="hidden flex flex-col gap-6">
+                        <div class="flex flex-col gap-2 max-w-md">
+                            <label class="font-mono text-xs tracking-widest text-textMuted uppercase">01 / Crew Name</label>
+                            <input id="input-crew-name" type="text" value="ALPHA CREW" class="bg-transparent border-0 border-b-2 border-borderDark focus:border-brandBlue focus:ring-0 text-2xl font-sora font-semibold text-textLight px-0 py-2 placeholder-neutral-700 transition-colors w-full" placeholder="THE SHIPYARD" oninput="syncCardData()"/>
+                        </div>
+
+                        <div class="flex flex-col gap-4 mt-2">
+                            <div class="flex items-center justify-between">
+                                <label class="font-mono text-xs tracking-widest text-textMuted uppercase">02 / Crew Members (Max 4)</label>
+                                <button class="flex items-center gap-2 border border-brandCyan/20 hover:border-brandCyan/60 bg-brandCyan/5 hover:bg-brandCyan/10 text-brandCyan px-4 py-1.5 rounded-lg text-xs font-mono tracking-wider transition-all" onclick="addCrewMember()">
+                                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                                    <span>ADD MEMBER</span>
+                                </button>
+                            </div>
+                            <div id="crew-list" class="flex flex-col gap-4">
+                                <!-- Crew rows are loaded here dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Error state container -->
+                    <div id="form-error" class="hidden border border-rose-500/30 bg-rose-950/15 rounded-xl p-4 flex gap-3 items-start">
+                        <span class="material-symbols-outlined text-rose-400">warning</span>
+                        <div class="flex-1 flex flex-col text-xs gap-1">
+                            <span class="font-mono font-bold text-rose-300 uppercase">INPUT VALIDATION ERROR</span>
+                            <span id="form-error-msg" class="text-rose-400/90 leading-normal">File format not supported. Try PNG or JPG.</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Action -->
+                    <button class="w-full bg-brandBlue hover:bg-brandBlue/90 active:scale-[0.98] border border-brandBlue/30 text-white font-sora font-semibold text-sm uppercase tracking-widest py-5 px-6 rounded-xl flex items-center justify-center gap-3 transition-all shadow-[0_0_20px_rgba(0,82,255,0.35)]" onclick="startGeneration()">
+                        <span class="material-symbols-outlined text-lg">generating_tokens</span>
+                        <span>GENERATE MY BUILDER ID</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Right Panel: Live Card Preview Sticky -->
+            <section class="lg:col-span-5 flex flex-col items-center gap-6 lg:sticky lg:top-28">
+                <span class="font-mono text-[10px] tracking-widest text-textMuted uppercase flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brandCyan led-pulse"></span>
+                    DYNAMIC PREVIEW
+                </span>
+
+                <!-- Card Perspective Container -->
+                <div class="perspective-card-container w-full max-w-[380px] flex justify-center">
+                    <div id="preview-card" class="tilt-card theme-neural w-full max-w-[380px] aspect-[4/5] bg-[var(--bg-card)] border border-[var(--accent-color)]/30 rounded-2xl relative overflow-hidden flex flex-col shadow-[0_16px_40px_rgba(0,0,0,0.7)] group">
+                        
+                        <!-- Internal Accents -->
+                        <div class="absolute inset-0 tech-grid opacity-10 pointer-events-none"></div>
+                        <div class="absolute inset-0 noise-overlay pointer-events-none"></div>
+                        <div class="absolute inset-0 holo-overlay opacity-30 group-hover:opacity-50 pointer-events-none transition-opacity"></div>
+                        
+                        <!-- Glow border lights in corners -->
+                        <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[var(--accent-color)] opacity-60"></div>
+                        <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[var(--accent-color)] opacity-60"></div>
+                        <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[var(--accent-color)] opacity-60"></div>
+                        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[var(--accent-color)] opacity-60"></div>
+
+                        <!-- Card Header -->
+                        <header class="px-6 py-4 flex justify-between items-start z-10 border-b border-borderDark/30">
+                            <div>
+                                <h3 class="font-sora text-[11px] font-extrabold tracking-widest text-textLight">HH GOA 2026</h3>
+                                <p class="font-mono text-[8px] text-textMuted tracking-wider mt-0.5">BUILDER ID</p>
+                            </div>
+                            <div class="font-mono text-[9px] bg-black/40 border border-borderDark text-[var(--accent-color)] px-2 py-0.5 rounded tracking-widest font-bold" id="card-id">
+                                HH26/BLD-07F2
+                            </div>
+                        </header>
+
+                        <!-- Card Body (Balanced, no dead spaces, 35% height photo, stacked typography) -->
+                        <main id="card-body-content" class="flex-1 flex flex-col items-center justify-start p-5 gap-4 z-10">
+                            
+                            <!-- Avatar Frame Offset (Larger size) -->
+                            <div class="relative w-44 h-44 aspect-square group/avatar select-none">
+                                <div class="absolute -inset-1 border border-[var(--accent-color)]/50 rounded-lg translate-x-1.5 translate-y-1.5 z-0"></div>
+                                <div class="absolute inset-0 border border-[var(--accent-color)] rounded-lg overflow-hidden z-10 bg-black/60 scanlines">
+                                    
+                                    <!-- Stylized vector icon fallback (displayed when no image loaded) -->
+                                    <div id="avatar-fallback" class="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-cardDark to-black z-20">
+                                        <svg id="svg-fallback-icon" class="w-16 h-16 text-[var(--accent-color)] opacity-70" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <!-- Dynamic fallback SVG shapes loaded via JS -->
+                                        </svg>
+                                    </div>
+                                    <img id="avatar-img" class="w-full h-full object-cover hidden z-30 relative" src="" alt="Avatar"/>
+                                </div>
+                                <div class="absolute bottom-1.5 right-1.5 w-3 h-3 rounded-full bg-emerald-500 border border-black z-40 led-pulse" style="--glow-color: #10b981"></div>
+                            </div>
+
+                            <!-- User Info fields (Connected and clean) -->
+                            <div class="w-full flex flex-col items-center text-center gap-0.5">
+                                <span class="font-mono text-[7px] tracking-widest text-textMuted uppercase">BUILDER PROFILE</span>
+                                <h4 id="card-name" class="font-sora text-xl font-extrabold uppercase tracking-tight text-textLight leading-none">ALEX CHEN</h4>
+                                <p id="card-role" class="font-mono text-[9px] text-[var(--accent-color)] uppercase tracking-wider font-semibold">AI/ML DEVELOPER</p>
+                            </div>
+                            
+                            <!-- Fine Divider -->
+                            <div class="w-full h-[1px] bg-borderDark/40"></div>
+
+                            <!-- Builder Class Large Editorial Typography and Manifesto -->
+                            <div class="w-full flex flex-col items-start gap-1">
+                                <div id="card-class-container" class="flex flex-col gap-0.5 font-sora text-xl font-extrabold uppercase leading-none tracking-tighter text-[var(--accent-color)]">
+                                    <!-- Populated dynamically via JS -->
+                                </div>
+                                <p id="card-manifesto" class="font-hanken text-[11px] italic text-textMuted mt-1 leading-snug">
+                                    "Builds systems that learn."
+                                </p>
+                            </div>
+                        </main>
+
+                        <!-- Card Footer -->
+                        <footer class="px-5 py-4 bg-black/40 border-t border-borderDark/30 flex justify-between items-center z-10">
+                            <div class="flex flex-col gap-1">
+                                <div class="font-mono text-[9px] text-textLight font-semibold">HH26 // GOA</div>
+                                <span class="font-mono text-[7px] text-textMuted tracking-wider uppercase">BUILD / SHIP / LAUNCH</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-mono text-[7px] text-textMuted text-right max-w-[65px] leading-tight">SCAN TO VIEW BUILDER</span>
+                                <div class="w-8 h-8 bg-white p-0.5 rounded overflow-hidden flex items-center justify-center shadow-lg">
+                                    <canvas id="qr-preview" class="w-full h-full"></canvas>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Technical Processing Animation Overlay (Fast loading logs) -->
+    <div id="loading-overlay" class="hidden fixed inset-0 bg-[#06070a]/98 z-50 flex flex-col justify-center items-center p-6 select-none font-mono">
+        <div class="absolute inset-0 tech-grid opacity-10 pointer-events-none"></div>
+        <div class="absolute inset-0 noise-overlay pointer-events-none"></div>
+
+        <div class="w-full max-w-md flex flex-col gap-6">
+            <div class="flex items-center gap-3 text-xs tracking-widest text-brandCyan">
+                <span class="material-symbols-outlined text-lg animate-spin">sync</span>
+                <span id="loading-title">BUILDING YOUR BUILDER ID...</span>
+            </div>
+
+            <!-- Terminal logs frame -->
+            <div id="terminal-lines" class="text-[11px] leading-relaxed text-textMuted flex flex-col gap-2 h-20 border border-borderDark bg-cardDark/50 p-4 rounded-lg overflow-y-auto">
+                <!-- Status lines printed here -->
+            </div>
+
+            <!-- Fast Progress Bar -->
+            <div class="w-full h-1 bg-borderDark rounded-full overflow-hidden relative">
+                <div class="h-full bg-gradient-to-r from-brandBlue to-brandCyan animate-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Immersive Reveal & Result Screen — FULLSCREEN TAKEOVER -->
+    <!-- Uses position:fixed + full bg color so the generator is completely covered -->
+    <div id="reveal-view" role="dialog" aria-modal="true" style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 9000;
+        background-color: #06070a;
+        overflow: hidden;
+    ">
+        <!-- Decorative overlays -->
+        <div class="absolute inset-0 tech-grid opacity-10 pointer-events-none"></div>
+        <div class="absolute inset-0 noise-overlay pointer-events-none"></div>
+
+        <!-- Close button top-right -->
+        <button onclick="resetGenerator()" style="
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 9100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: 1px solid rgba(26,30,40,0.6);
+            background: rgba(12,14,20,0.85);
+            border-radius: 12px;
+            color: #9ca3af;
+            cursor: pointer;
+            transition: color 0.15s;
+        " onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">
+            <span class="material-symbols-outlined" style="font-size:20px;">close</span>
+        </button>
+
+        <!-- PHASE 1: Builder Class word reveal (shown first, then hidden) -->
+        <div id="reveal-animation-container" style="
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 16px;
+            z-index: 9010;
+            padding: 24px;
+            transition: opacity 0.3s ease;
+        ">
+            <span class="font-mono" style="font-size:10px; letter-spacing:0.15em; color:#00f0ff; text-transform:uppercase;">IDENTITY COMPILATION COMPLETE</span>
+            <h3 class="font-mono" style="font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:0.1em;">YOUR BUILDER CLASS</h3>
+            <div id="reveal-class-words" style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 16px 0;
+            ">
+                <!-- Words revealed one by one via JS -->
+            </div>
+        </div>
+
+        <!-- PHASE 2: Final result (hidden until class reveal fades out) -->
+        <div id="reveal-result-container" style="
+            display: none;
+            position: absolute;
+            inset: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 24px 20px;
+            gap: 12px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        ">
+            <!-- Header -->
+            <div style="text-align:center; flex-shrink:0;">
+                <div class="font-mono" style="font-size:9px; letter-spacing:0.15em; color:#00f0ff; text-transform:uppercase; margin-bottom:2px;">SUCCESS PROTOCOL</div>
+                <div class="font-sora" style="font-size:clamp(16px,3vw,24px); font-weight:800; color:#f3f4f6; text-transform:uppercase; letter-spacing:-0.02em;">BUILDER ID READY</div>
+            </div>
+
+            <!-- Card container — fills remaining space, card scales inside it -->
+            <div id="reveal-card-placement" style="
+                flex: 1;
+                min-height: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                padding: 4px 0;
+            ">
+                <!-- Standalone rendered card injected here by showFinalBadge() -->
+            </div>
+
+            <!-- Action buttons -->
+            <div style="flex-shrink:0; width:100%; max-width:480px; display:flex; flex-direction:column; gap:8px;">
+                <div style="display:flex; gap:12px; width:100%;">
+                    <button onclick="downloadBadge()" class="font-sora" style="
+                        flex:1;
+                        background:#0052ff;
+                        border:1px solid rgba(0,82,255,0.3);
+                        color:#fff;
+                        font-size:11px;
+                        font-weight:700;
+                        text-transform:uppercase;
+                        letter-spacing:0.1em;
+                        padding:14px 16px;
+                        border-radius:12px;
+                        cursor:pointer;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        gap:8px;
+                        transition:opacity 0.15s;
+                    " onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
+                        <span class="material-symbols-outlined" style="font-size:16px;">download</span>
+                        DOWNLOAD PNG
+                    </button>
+                    <button onclick="shareToX()" class="font-sora" style="
+                        flex:1;
+                        background:rgba(12,14,20,0.5);
+                        border:1px solid rgba(26,30,40,0.8);
+                        color:#f3f4f6;
+                        font-size:11px;
+                        font-weight:700;
+                        text-transform:uppercase;
+                        letter-spacing:0.1em;
+                        padding:14px 16px;
+                        border-radius:12px;
+                        cursor:pointer;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        gap:8px;
+                        transition:background 0.15s;
+                    " onmouseover="this.style.background='rgba(12,14,20,0.9)'" onmouseout="this.style.background='rgba(12,14,20,0.5)'">
+                        <span style="font-weight:700;">𝕏</span>
+                        SHARE TO X
+                    </button>
+                </div>
+                <button onclick="resetGenerator()" class="font-mono" style="
+                    width:100%;
+                    background:none;
+                    border:none;
+                    color:#9ca3af;
+                    font-size:9px;
+                    letter-spacing:0.12em;
+                    text-transform:uppercase;
+                    text-decoration:underline;
+                    cursor:pointer;
+                    padding:6px 0;
+                    transition:color 0.15s;
+                " onmouseover="this.style.color='#f3f4f6'" onmouseout="this.style.color='#9ca3af'">
+                    CREATE ANOTHER BUILDER ID
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Share Profile Page View (Viewer Mode) -->
+    <div id="viewer-view" class="hidden w-full max-w-5xl pt-28 pb-20 px-6 flex-1 flex flex-col items-center justify-start z-10">
+        <div class="w-full flex flex-col items-center gap-10">
+            <div class="flex flex-col items-center text-center gap-3 max-w-xl">
+                <span class="font-mono text-xs tracking-widest text-brandCyan bg-brandBlue/10 border border-brandBlue/25 px-4 py-1 rounded-full">OFFICIAL CREDENTIAL VERIFIED</span>
+                <h2 class="font-sora text-3xl sm:text-4xl font-extrabold text-textLight">HH GOA 2026 BUILDER PROFILE</h2>
+                <p class="text-textMuted text-sm sm:text-base leading-normal">
+                    This Builder ID was dynamically generated on-chain for the official HH Goa 2026 event. Review qualifications below.
+                </p>
+            </div>
+
+            <!-- Container for card display -->
+            <div id="viewer-card-placement" class="flex justify-center w-full"></div>
+
+            <!-- Shared view CTAs -->
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-center w-full max-w-md">
+                <button class="w-full bg-brandBlue hover:bg-brandBlue/90 active:scale-[0.98] border border-brandBlue/30 text-white font-sora font-semibold text-xs uppercase tracking-widest py-4.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all shadow-[0_0_15px_rgba(0,82,255,0.25)]" onclick="downloadBadge()">
+                    <span class="material-symbols-outlined text-sm">download</span>
+                    <span>DOWNLOAD THIS BADGE</span>
+                </button>
+                <a href="/" class="w-full border border-brandCyan/20 bg-brandCyan/5 hover:bg-brandCyan/10 text-brandCyan font-sora font-semibold text-xs uppercase tracking-widest py-4.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all text-center">
+                    <span>CREATE YOUR OWN BUILDER ID →</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Export Canvas -->
+    <canvas id="export-canvas" class="hidden"></canvas>
+
+    <!-- Main Logic script -->
+    <script>
+        // Global variables to store UI layout template
+        let soloBodyHTML = '';
+
+        // State Store
+        const state = {
+            mode: 'solo', // 'solo' or 'crew'
+            name: 'ALEX CHEN',
+            role: 'AI/ML DEVELOPER',
+            avatar: '', // Base64 data URL
+            builderClass: 'THE NEURAL ARCHITECT',
+            builderManifesto: '"Builds systems that learn."',
+            builderId: 'HH26-BLD-07F2',
+            theme: 'neural', // 'neural', 'pixel', 'kernel', 'protocol', 'hardware', 'chaos'
+            crew: [
+                { id: 1, name: 'ALEX CHEN', role: 'FULL STACK DEV', avatar: '', builderClass: 'THE CHAOS ARCHITECT', builderId: 'HH26-BLD-71E9', theme: 'chaos' },
+                { id: 2, name: 'SARA RAO', role: 'UI/UX DESIGNER', avatar: '', builderClass: 'THE PIXEL ALCHEMIST', builderId: 'HH26-BLD-55C1', theme: 'pixel' }
+            ]
+        };
+
+        // ============================================================
+        // PUBLIC BASE URL — Auto-detected from current host
+        // ============================================================
+        // Automatically uses the host the page is served from:
+        //   • Local dev via LAN IP (e.g. http://192.168.29.43:8000) → QR encodes LAN URL ✓
+        //   • Production (e.g. https://your-domain.com) → QR encodes production URL ✓
+        //   • localhost → QR encodes localhost (phone on same machine only)
+        //
+        // To override for a specific LAN IP (e.g. when testing with a different device):
+        //   const PUBLIC_BASE_URL = "http://192.168.29.43:8000";
+        const PUBLIC_BASE_URL = window.location.origin;
+
+        // ONE canonical URL function used by QR, X, public page, OG
+        function getBuilderShareUrl(builderId) {
+            const base = PUBLIC_BASE_URL.replace(/\/$/, '');
+            return `${base}/share/${encodeURIComponent(builderId)}`;
+        }
+
+        // Persist builder data to localStorage (local device cache) & cloud JSON store (cross-device sharing)
+        async function persistBuilderData() {
+            const payload = {
+                mode: state.mode,
+                name: state.name,
+                role: state.role,
+                builderClass: state.builderClass,
+                builderManifesto: state.builderManifesto,
+                builderId: state.builderId,
+                theme: state.theme,
+                avatar: state.avatar,
+                timestamp: Date.now()
+            };
+            if (state.mode === 'crew') {
+                payload.crew = state.crew.map(m => ({
+                    name: m.name,
+                    role: m.role,
+                    builderClass: m.builderClass,
+                    builderId: m.builderId,
+                    theme: m.theme,
+                    avatar: m.avatar
+                }));
+            }
+            
+            // 1. Save to local storage for instant local lookup / offline support
+            try {
+                localStorage.setItem(`builder_${state.builderId}`, JSON.stringify(payload));
+            } catch (e) {
+                console.warn('Storage quota exceeded, removing old entries...');
+                const keys = [];
+                for (let i = 0; i < localStorage.length; i++) {
+                    const k = localStorage.key(i);
+                    if (k.startsWith('builder_')) keys.push(k);
+                }
+                if (keys.length > 0) {
+                    localStorage.removeItem(keys[0]);
+                    try { localStorage.setItem(`builder_${state.builderId}`, JSON.stringify(payload)); } catch(e2) {}
+                }
+            }
+
+            // 2. Save to dev server endpoint for instant LAN cross-device persistence
+            try {
+                await fetch(`/api/builder/${encodeURIComponent(state.builderId)}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+            } catch (err) {
+                console.warn('API persistence failed.', err);
+            }
+        }
+
+        // Load persisted builder data by ID (server endpoint first, local cache fallback)
+        async function loadPersistedBuilder(builderId) {
+            let isNetworkError = false;
+            
+            // First: query server API endpoint (Source of Truth)
+            try {
+                console.log(`Querying builder database for ID: ${builderId}...`);
+                const apiResponse = await fetch(`/api/builder/${encodeURIComponent(builderId)}`);
+                if (apiResponse.ok) {
+                    const payload = await apiResponse.json();
+                    try {
+                        localStorage.setItem(`builder_${builderId}`, JSON.stringify(payload));
+                    } catch (e) {}
+                    return { status: 'success', data: payload };
+                } else if (apiResponse.status === 404) {
+                    return { status: 'not_found', data: null };
+                }
+            } catch (err) {
+                console.warn('API fetch failed, trying local fallback...', err);
+                isNetworkError = true;
+            }
+
+            // Second: check local storage as fallback if offline
+            if (isNetworkError) {
+                try {
+                    const localData = localStorage.getItem(`builder_${builderId}`);
+                    if (localData) {
+                        console.log('Loaded from local device cache due to network error');
+                        return { status: 'success', data: JSON.parse(localData) };
+                    }
+                } catch (e) {}
+                return { status: 'error', data: null };
+            }
+
+            return { status: 'not_found', data: null };
+        }
+
+        // Class Manifesto Mapping
+        const MANIFESTOS = {
+            'THE NEURAL ARCHITECT': '"Builds systems that learn."',
+            'THE MODEL MAKER': '"Turns data into intelligence."',
+            'THE PROMPT ALCHEMIST': '"Turns ideas into instructions."',
+            'THE VISION BUILDER': '"Teaches machines to see."',
+            'THE DATA ALCHEMIST': '"Finds signals inside the noise."',
+            'THE SIGNAL MINER': '"Extracts gold from raw streams."',
+            'THE PATTERN HUNTER': '"Sees shapes in chaotic bytes."',
+            'THE INTERFACE BUILDER': '"Bridges human thought and pixels."',
+            'THE PIXEL PUSHER': '"Makes interfaces impossible to ignore."',
+            'THE EXPERIENCE ENGINEER': '"Crafts digital journeys."',
+            'THE API ARCHITECT': '"Connects systems at scale."',
+            'THE LOGIC ENGINEER': '"Structures engines of progress."',
+            'THE SYSTEM BUILDER': '"Orchestrates machine complexity."',
+            'THE FULL-STACK HACKER': '"Bridges database and frontend."',
+            'THE STACK SHIPPER': '"Takes raw code to production."',
+            'THE PRODUCT BUILDER': '"Designs things people love."',
+            'THE SYSTEM BREAKER': '"Finds cracks before they do."',
+            'THE BUG HUNTER': '"Finds what shouldn\'t be there."',
+            'THE SECURITY SHADOW': '"Defends protocol gates."',
+            'THE SHIP ENGINEER': '"Turns commits into deployments."',
+            'THE DEPLOYMENT WIZARD': '"Makes scaling look effortless."',
+            'THE INFRA BUILDER': '"Lays tracks for heavy loads."',
+            'THE CIRCUIT BENDER': '"Makes hardware do more."',
+            'THE HARDWARE HACKER': '"Bridges silicon and code."',
+            'THE SENSOR BUILDER': '"Connects physical state to web."',
+            'THE VISUAL ARCHITECT': '"Shapes aesthetic direction."',
+            'THE EXPERIENCE MAKER': '"Delights in every screen flow."',
+            'THE PRODUCT SHIPPER': '"Turns ideas into things people use."',
+            'THE IDEA ARCHITECT': '"Draws blueprints for shipping."',
+            'THE BUILDER OF THINGS': '"Translates dreams into systems."',
+            'THE PROTOCOL BUILDER': '"Writes consensus rules."',
+            'THE CHAIN ARCHITECT': '"Builds on distributed trust."'
+        };
+
+        // Fallback Vector Graphics based on Theme
+        const FALLBACK_AVATARS = {
+            neural: `<circle cx="50" cy="40" r="15" fill="none" stroke="#00f0ff" stroke-width="2"/>
+                     <circle cx="25" cy="70" r="8" fill="none" stroke="#00f0ff" stroke-width="1.5"/>
+                     <circle cx="75" cy="70" r="8" fill="none" stroke="#00f0ff" stroke-width="1.5"/>
+                     <line x1="40" y1="50" x2="28" y2="63" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="2 2"/>
+                     <line x1="60" y1="50" x2="72" y2="63" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="2 2"/>
+                     <circle cx="50" cy="40" r="6" fill="#0052ff"/>`,
+            pixel: `<path d="M50,15 L80,65 L20,65 Z" fill="none" stroke="#ff8fe3" stroke-width="2"/>
+                    <circle cx="50" cy="45" r="10" fill="none" stroke="#ff8fe3" stroke-width="2"/>
+                    <rect x="42" y="60" width="16" height="12" fill="none" stroke="#ff8fe3" stroke-width="1.5"/>`,
+            kernel: `<rect x="25" y="25" width="50" height="50" rx="4" fill="none" stroke="#39ff14" stroke-width="2"/>
+                     <path d="M35,45 L45,50 L35,55" fill="none" stroke="#39ff14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <line x1="48" y1="55" x2="60" y2="55" stroke="#39ff14" stroke-width="2"/>`,
+            protocol: `<circle cx="50" cy="50" r="30" fill="none" stroke="#ffd700" stroke-width="2"/>
+                       <circle cx="50" cy="50" r="20" fill="none" stroke="#ffd700" stroke-width="1" stroke-dasharray="3 3"/>
+                       <path d="M50,32 L50,55 M42,42 L58,42" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>`,
+            hardware: `<rect x="30" y="30" width="40" height="40" rx="2" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                       <line x1="20" y1="40" x2="30" y2="40" stroke="#ff6b35" stroke-width="2"/>
+                       <line x1="20" y1="50" x2="30" y2="50" stroke="#ff6b35" stroke-width="2"/>
+                       <line x1="20" y1="60" x2="30" y2="60" stroke="#ff6b35" stroke-width="2"/>
+                       <line x1="70" y1="40" x2="80" y2="40" stroke="#ff6b35" stroke-width="2"/>
+                       <line x1="70" y1="50" x2="80" y2="50" stroke="#ff6b35" stroke-width="2"/>
+                       <line x1="70" y1="60" x2="80" y2="60" stroke="#ff6b35" stroke-width="2"/>
+                       <circle cx="50" cy="50" r="6" fill="#ff6b35"/>`,
+            chaos: `<path d="M25,25 L75,35 L60,75 L30,65 Z" fill="none" stroke="#ff3366" stroke-width="2"/>
+                    <line x1="25" y1="25" x2="60" y2="75" stroke="#ff3366" stroke-width="1"/>
+                    <line x1="75" y1="35" x2="30" y2="65" stroke="#ff3366" stroke-width="1"/>`
+        };
+
+        // Theme Classifier Engine based on stack/role input keywords
+        function getThemeAndClass(role) {
+            const r = role.toLowerCase().trim();
+            
+            // AI/ML Taxonomy
+            if (r.includes('ai') || r.includes('ml') || r.includes('model') || r.includes('neural') || r.includes('deep') || r.includes('gpt') || r.includes('llm') || r.includes('model') || r.includes('prompt') || r.includes('vision')) {
+                if (r.includes('model')) return { theme: 'neural', classText: 'THE MODEL MAKER' };
+                if (r.includes('prompt')) return { theme: 'neural', classText: 'THE PROMPT ALCHEMIST' };
+                if (r.includes('vision')) return { theme: 'neural', classText: 'THE VISION BUILDER' };
+                return { theme: 'neural', classText: 'THE NEURAL ARCHITECT' };
+            }
+            
+            // Data Taxonomy
+            if (r.includes('data') || r.includes('signal') || r.includes('analytics') || r.includes('miner') || r.includes('pattern')) {
+                if (r.includes('miner')) return { theme: 'neural', classText: 'THE SIGNAL MINER' };
+                if (r.includes('pattern')) return { theme: 'neural', classText: 'THE PATTERN HUNTER' };
+                return { theme: 'neural', classText: 'THE DATA ALCHEMIST' };
+            }
+
+            // Frontend / UX Typography
+            if (r.includes('frontend') || r.includes('css') || r.includes('pixel') || r.includes('ux') || r.includes('ui') || r.includes('interface')) {
+                if (r.includes('pixel')) return { theme: 'pixel', classText: 'THE PIXEL PUSHER' };
+                if (r.includes('experience') || r.includes('ux')) return { theme: 'pixel', classText: 'THE EXPERIENCE ENGINEER' };
+                return { theme: 'pixel', classText: 'THE INTERFACE BUILDER' };
+            }
+
+            // Backend / Systems
+            if (r.includes('backend') || r.includes('rust') || r.includes('go') || r.includes('c++') || r.includes('systems') || r.includes('db') || r.includes('sql') || r.includes('node') || r.includes('api')) {
+                if (r.includes('api')) return { theme: 'kernel', classText: 'THE API ARCHITECT' };
+                if (r.includes('systems')) return { theme: 'kernel', classText: 'THE SYSTEM BUILDER' };
+                return { theme: 'kernel', classText: 'THE LOGIC ENGINEER' };
+            }
+
+            // Full Stack
+            if (r.includes('fullstack') || r.includes('full stack') || r.includes('product') || r.includes('shipper') || r.includes('ship')) {
+                if (r.includes('product')) return { theme: 'chaos', classText: 'THE PRODUCT BUILDER' };
+                if (r.includes('shipper') || r.includes('ship')) return { theme: 'chaos', classText: 'THE STACK SHIPPER' };
+                return { theme: 'chaos', classText: 'THE FULL-STACK HACKER' };
+            }
+
+            // Cybersecurity
+            if (r.includes('security') || r.includes('cyber') || r.includes('bug') || r.includes('hack') || r.includes('pentest') || r.includes('breaker')) {
+                if (r.includes('bug') || r.includes('hunter')) return { theme: 'protocol', classText: 'THE BUG HUNTER' };
+                if (r.includes('breaker')) return { theme: 'protocol', classText: 'THE SYSTEM BREAKER' };
+                return { theme: 'protocol', classText: 'THE SECURITY SHADOW' };
+            }
+
+            // DevOps / Cloud
+            if (r.includes('devops') || r.includes('cloud') || r.includes('docker') || r.includes('aws') || r.includes('deploy') || r.includes('kubernetes')) {
+                if (r.includes('deploy') || r.includes('wizard')) return { theme: 'kernel', classText: 'THE DEPLOYMENT WIZARD' };
+                if (r.includes('infra')) return { theme: 'kernel', classText: 'THE INFRA BUILDER' };
+                return { theme: 'kernel', classText: 'THE SHIP ENGINEER' };
+            }
+
+            // Hardware / IoT
+            if (r.includes('hardware') || r.includes('iot') || r.includes('circuit') || r.includes('arduino') || r.includes('embedded') || r.includes('sensor')) {
+                if (r.includes('circuit') || r.includes('bender')) return { theme: 'hardware', classText: 'THE CIRCUIT BENDER' };
+                if (r.includes('sensor')) return { theme: 'hardware', classText: 'THE SENSOR BUILDER' };
+                return { theme: 'hardware', classText: 'THE HARDWARE HACKER' };
+            }
+
+            // UI/UX Design
+            if (r.includes('design') || r.includes('framer') || r.includes('figma') || r.includes('graphic') || r.includes('visual') || r.includes('creative')) {
+                if (r.includes('visual') || r.includes('graphic')) return { theme: 'pixel', classText: 'THE VISUAL ARCHITECT' };
+                if (r.includes('experience') || r.includes('interaction')) return { theme: 'pixel', classText: 'THE EXPERIENCE MAKER' };
+                return { theme: 'pixel', classText: 'THE PIXEL PUSHER' };
+            }
+
+            // Product / Program
+            if (r.includes('pm') || r.includes('owner') || r.includes('manager') || r.includes('idea')) {
+                if (r.includes('shipper')) return { theme: 'chaos', classText: 'THE PRODUCT SHIPPER' };
+                if (r.includes('idea')) return { theme: 'chaos', classText: 'THE IDEA ARCHITECT' };
+                return { theme: 'chaos', classText: 'THE BUILDER OF THINGS' };
+            }
+
+            // Web3 / Smart Contract
+            if (r.includes('web3') || r.includes('solidity') || r.includes('crypto') || r.includes('blockchain') || r.includes('consensus') || r.includes('chain')) {
+                if (r.includes('chain') || r.includes('ledger')) return { theme: 'protocol', classText: 'THE CHAIN ARCHITECT' };
+                return { theme: 'protocol', classText: 'THE PROTOCOL BUILDER' };
+            }
+
+            // Default general fallback
+            return { theme: 'chaos', classText: 'THE CHAOS ARCHITECT' };
+        }
+
+        // Initialize App & Check Hash-Based Share Routes
+        window.addEventListener('DOMContentLoaded', () => {
+            initCardTilt();
+            initDragAndDrop();
+            
+            // Backup initial template structure
+            soloBodyHTML = document.getElementById('card-body-content').innerHTML;
+
+            // Generate standard initial ID
+            state.builderId = generateRandomID();
+            
+            // Check for path-based share route first: /share/HH26-BLD-XXXX
+            const path = window.location.pathname;
+            const pathMatch = path.match(/\/share\/([^\/]+)/);
+            
+            // Check for fallback hash-based share route: #share/HH26-BLD-XXXX
+            const hash = window.location.hash;
+            const hashMatch = hash.match(/^#share\/(.+)$/);
+            
+            // Also support legacy query param routes
+            const params = new URLSearchParams(window.location.search);
+            const legacyShare = params.get('share') === 'true' || params.get('name');
+
+            if (pathMatch) {
+                // Clean path-based route
+                const builderId = decodeURIComponent(pathMatch[1]);
+                loadSharedBadge(builderId);
+            } else if (hashMatch) {
+                // Fallback hash-based route
+                const builderId = decodeURIComponent(hashMatch[1]);
+                loadSharedBadge(builderId);
+            } else if (legacyShare) {
+                // Legacy query param route — extract builder ID and try localStorage/cloud
+                const legacyId = params.get('id') || 'HH26-BLD-0000';
+                loadSharedBadge(legacyId);
+            } else {
+                // Normal generator view
+                syncCardData();
+                renderCrewList();
+            }
+
+            // Accessibility Key listener
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && document.getElementById('reveal-view').style.display !== 'none') {
+                    resetGenerator();
+                }
+            });
+        });
+
+        // Listen for hash changes (back button support)
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash;
+            const shareMatch = hash.match(/^#share\/(.+)$/);
+            if (shareMatch) {
+                const builderId = decodeURIComponent(shareMatch[1]);
+                loadSharedBadge(builderId);
+            }
+        });
+
+        // Set Editor Mode (Solo / Crew)
+        function setMode(mode) {
+            state.mode = mode;
+            const btnSolo = document.getElementById('toggle-solo');
+            const btnCrew = document.getElementById('toggle-crew');
+            const formSolo = document.getElementById('form-solo');
+            const formCrew = document.getElementById('form-crew');
+
+            if (mode === 'solo') {
+                btnSolo.className = "px-5 py-2 font-mono text-xs tracking-wider uppercase rounded-md bg-brandBlue text-white font-bold transition-all";
+                btnCrew.className = "px-5 py-2 font-mono text-xs tracking-wider uppercase rounded-md text-textMuted hover:text-textLight transition-all";
+                formSolo.classList.remove('hidden');
+                formCrew.classList.add('hidden');
+            } else {
+                btnSolo.className = "px-5 py-2 font-mono text-xs tracking-wider uppercase rounded-md text-textMuted hover:text-textLight transition-all";
+                btnCrew.className = "px-5 py-2 font-mono text-xs tracking-wider uppercase rounded-md bg-brandBlue text-white font-bold transition-all";
+                formSolo.classList.add('hidden');
+                formCrew.classList.remove('hidden');
+            }
+            syncCardData();
+        }
+
+        // Generate Random ID with hex prefix
+        function generateRandomID() {
+            const hex = Math.floor(Math.random() * 65535).toString(16).toUpperCase().padStart(4, '0');
+            return `HH26-BLD-${hex}`;
+        }
+
+        // HEIC & drag & drop events
+        function initDragAndDrop() {
+            const dropzone = document.getElementById('dropzone');
+            if (!dropzone) return;
+
+            dropzone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropzone.classList.add('border-brandCyan', 'bg-brandCyan/5');
+            });
+
+            dropzone.addEventListener('dragleave', () => {
+                dropzone.classList.remove('border-brandCyan', 'bg-brandCyan/5');
+            });
+
+            dropzone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropzone.classList.remove('border-brandCyan', 'bg-brandCyan/5');
+                if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                    processImageFile(e.dataTransfer.files[0], 0);
+                }
+            });
+
+            dropzone.addEventListener('click', (e) => {
+                // Prevent bubbling if clicking internal triggers
+                if (e.target.tagName !== 'BUTTON' && e.target.parentElement.tagName !== 'BUTTON') {
+                    document.getElementById('file-upload').click();
+                }
+            });
+        }
+
+        // Process File Upload including HEIC
+        async function processImageFile(file, crewIndex = 0) {
+            hideError();
+            
+            const dropLabel = document.querySelector('#dropzone p');
+            const originalText = dropLabel ? dropLabel.innerText : 'DROP / TAP / TAKE PHOTO';
+            if (dropLabel) dropLabel.innerText = "PROCESSING IMAGE...";
+            
+            // Check for HEIC file format
+            if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic') {
+                if (typeof heic2any !== 'undefined') {
+                    try {
+                        const blob = await heic2any({ blob: file, toType: 'image/jpeg', quality: 0.8 });
+                        file = new File([blob], file.name.replace(/\.[^/.]+$/, "") + ".jpg", { type: "image/jpeg" });
+                    } catch (e) {
+                        console.error(e);
+                        showError("HEIC image could not be processed. Try a JPG or PNG instead.");
+                        if (dropLabel) dropLabel.innerText = originalText;
+                        return;
+                    }
+                } else {
+                    showError("HEIC converter module not ready yet.");
+                    if (dropLabel) dropLabel.innerText = originalText;
+                    return;
+                }
+            }
+
+            // Normal JPEG/PNG upload reader
+            if (!file.type.startsWith('image/')) {
+                showError("Unsupported format. Please upload JPG, PNG or HEIC image files.");
+                if (dropLabel) dropLabel.innerText = originalText;
+                return;
+            }
+
+            // Limit image file size to 10MB
+            if (file.size > 10 * 1024 * 1024) {
+                showError("Image is too large. Please choose a smaller image (under 10MB).");
+                if (dropLabel) dropLabel.innerText = originalText;
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const img = new Image();
+                img.onload = () => {
+                    const maxDim = 400;
+                    let w = img.width;
+                    let h = img.height;
+                    if (w > maxDim || h > maxDim) {
+                        if (w > h) {
+                            h = Math.round((h * maxDim) / w);
+                            w = maxDim;
+                        } else {
+                            w = Math.round((w * maxDim) / h);
+                            h = maxDim;
+                        }
+                    }
+                    const canvas = document.createElement('canvas');
+                    canvas.width = w;
+                    canvas.height = h;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, w, h);
+                    const compressedData = canvas.toDataURL('image/jpeg', 0.85);
+
+                    if (state.mode === 'solo') {
+                        state.avatar = compressedData;
+                    } else {
+                        state.crew[crewIndex].avatar = compressedData;
+                    }
+                    syncCardData();
+                    renderCrewList();
+                    if (dropLabel) dropLabel.innerText = originalText;
+                };
+                img.onerror = () => {
+                    showError("Error processing image file.");
+                    if (dropLabel) dropLabel.innerText = originalText;
+                };
+                img.src = e.target.result;
+            };
+            reader.onerror = () => {
+                showError("Error reading image file.");
+                if (dropLabel) dropLabel.innerText = originalText;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function uploadPhoto(event, crewIndex = 0) {
+            if (event.target.files && event.target.files[0]) {
+                processImageFile(event.target.files[0], crewIndex);
+            }
+        }
+
+        // Error message indicators
+        function showError(msg) {
+            const errDiv = document.getElementById('form-error');
+            const errMsg = document.getElementById('form-error-msg');
+            errMsg.innerText = msg;
+            errDiv.classList.remove('hidden');
+        }
+
+        function hideError() {
+            document.getElementById('form-error').classList.add('hidden');
+        }
+
+        function showToast(msg) {
+            console.log("Status update: ", msg);
+        }
+
+        // Sync local forms to structural state & card preview DOM
+        function syncCardData() {
+            const previewCard = document.getElementById('preview-card');
+            
+            if (state.mode === 'solo') {
+                // Restore Solo template layout
+                document.getElementById('card-body-content').innerHTML = soloBodyHTML;
+
+                state.name = document.getElementById('input-name').value || 'YOUR NAME';
+                state.role = document.getElementById('input-role').value || 'STACK / ROLE';
+                
+                const meta = getThemeAndClass(state.role);
+                state.theme = meta.theme;
+                state.builderClass = meta.classText;
+                state.builderManifesto = MANIFESTOS[state.builderClass] || '"Striving for elegant implementation."';
+
+                // Sync UI elements
+                document.getElementById('card-name').innerText = state.name;
+                document.getElementById('card-role').innerText = state.role;
+                document.getElementById('card-manifesto').innerText = state.builderManifesto;
+                document.getElementById('card-id').innerText = state.builderId;
+                
+                // Stack typography words inside class container
+                const classWords = state.builderClass.split(' ');
+                let classHTML = '';
+                classWords.forEach(w => {
+                    classHTML += `<div class="leading-none text-2xl font-extrabold tracking-tighter text-[var(--accent-color)]">${w}</div>`;
+                });
+                document.getElementById('card-class-container').innerHTML = classHTML;
+                
+                // Update theme classes on card
+                previewCard.className = `tilt-card theme-${state.theme} w-full max-w-[380px] aspect-[4/5] bg-[var(--bg-card)] border border-[var(--accent-color)]/30 rounded-2xl relative overflow-hidden flex flex-col shadow-[0_16px_40px_rgba(0,0,0,0.7)] group`;
+
+                // Render vector fallback SVG icon
+                document.getElementById('svg-fallback-icon').innerHTML = FALLBACK_AVATARS[state.theme];
+
+                const avatarImg = document.getElementById('avatar-img');
+                const avatarFallback = document.getElementById('avatar-fallback');
+                
+                if (state.avatar) {
+                    avatarImg.src = state.avatar;
+                    avatarImg.classList.remove('hidden');
+                    avatarFallback.classList.add('hidden');
+                } else {
+                    avatarImg.classList.add('hidden');
+                    avatarFallback.classList.remove('hidden');
+                }
+
+                // Update QR code preview with canonical URL
+                generatePreviewQR(getBuilderShareUrl(state.builderId));
+
+            } else {
+                // Crew Mode Preview
+                state.name = document.getElementById('input-crew-name').value || 'ALPHA CREW';
+                state.role = 'BUILDER CREW';
+                state.theme = 'chaos'; // Crew mode gets default theme
+                state.builderClass = 'COLLECTIVE CREW CREDENTIAL';
+                state.builderManifesto = '"Collaborate, design, build, ship."';
+
+                // Update theme classes on card
+                previewCard.className = `tilt-card theme-chaos w-full max-w-[380px] aspect-[4/5] bg-[var(--bg-card)] border border-[var(--accent-color)]/30 rounded-2xl relative overflow-hidden flex flex-col shadow-[0_16px_40px_rgba(0,0,0,0.7)] group`;
+
+                // Render grid of crew members in the main preview card body content
+                let membersHTML = `<div class="grid grid-cols-2 gap-3 w-full mt-1.5 flex-1 overflow-y-auto min-h-0">`;
+                state.crew.forEach(m => {
+                    membersHTML += `
+                        <div class="border border-brandCyan/20 p-2 rounded-lg bg-black/40 flex flex-col items-center text-center gap-1.5 min-w-0">
+                            <div class="w-14 h-14 rounded-md overflow-hidden bg-black border border-brandCyan/40 relative">
+                                ${m.avatar ? `<img src="${m.avatar}" class="w-full h-full object-cover"/>` : `
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-xs text-textMuted">face</span>
+                                </div>`}
+                            </div>
+                            <div class="w-full min-w-0">
+                                <h5 class="font-sora text-[10px] font-extrabold text-textLight truncate uppercase leading-none">${m.name}</h5>
+                                <p class="font-mono text-[7px] text-textMuted truncate uppercase mt-0.5">${m.role}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+                membersHTML += `</div>`;
+
+                document.getElementById('card-body-content').innerHTML = membersHTML;
+                document.getElementById('card-id').innerText = state.builderId;
+
+                generatePreviewQR(getBuilderShareUrl(state.builderId));
+            }
+        }
+
+        // Render input panels dynamically for Crew Members
+        function renderCrewList() {
+            const listDiv = document.getElementById('crew-list');
+            listDiv.innerHTML = '';
+
+            state.crew.forEach((member, index) => {
+                const row = document.createElement('div');
+                row.className = "bg-cardDark/80 border border-borderDark/60 p-4 rounded-xl flex flex-col gap-4 relative";
+                row.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-borderDark/30 pb-2">
+                        <span class="font-mono text-[10px] tracking-wider text-brandCyan">MEMBER #${index + 1}</span>
+                        ${state.crew.length > 1 ? `
+                        <button class="text-rose-500 hover:text-rose-400 font-mono text-[10px] tracking-wider flex items-center gap-1" onclick="removeCrewMember(${member.id})">
+                            <span class="material-symbols-outlined text-xs">delete</span> DELETE
+                        </button>` : ''}
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex flex-col gap-1.5">
+                            <label class="font-mono text-[10px] text-textMuted uppercase">Name</label>
+                            <input type="text" value="${member.name}" class="bg-black/30 border border-borderDark focus:border-brandBlue focus:ring-0 text-sm font-semibold rounded-lg text-textLight px-3 py-2 w-full" placeholder="BAVESH" oninput="updateCrewMember(${index}, 'name', this.value)"/>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <label class="font-mono text-[10px] text-textMuted uppercase">Role/Stack</label>
+                            <input type="text" value="${member.role}" class="bg-black/30 border border-borderDark focus:border-brandBlue focus:ring-0 text-sm font-semibold rounded-lg text-textLight px-3 py-2 w-full" placeholder="AI / ML DEV" oninput="updateCrewMember(${index}, 'role', this.value)"/>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg border border-borderDark overflow-hidden bg-black flex items-center justify-center relative">
+                            ${member.avatar ? `<img src="${member.avatar}" class="w-full h-full object-cover"/>` : `<span class="material-symbols-outlined text-textMuted text-lg">face</span>`}
+                        </div>
+                        <div class="flex-1 flex gap-2">
+                            <button class="border border-borderDark hover:border-brandBlue/55 bg-black/40 hover:bg-black/70 px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all text-textLight" onclick="document.getElementById('crew-upload-${index}').click()">
+                                UPLOAD PHOTO
+                            </button>
+                            <button class="border border-borderDark hover:border-brandCyan/55 bg-black/40 hover:bg-black/70 px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all text-textLight" onclick="document.getElementById('crew-camera-${index}').click()">
+                                TAKE PHOTO
+                            </button>
+                            <input id="crew-upload-${index}" type="file" accept="image/*,image/heic" class="hidden" onchange="uploadPhoto(event, ${index})"/>
+                            <input id="crew-camera-${index}" type="file" accept="image/*" capture="user" class="hidden" onchange="uploadPhoto(event, ${index})"/>
+                        </div>
+                    </div>
+                `;
+                listDiv.appendChild(row);
+            });
+        }
+
+        function addCrewMember() {
+            if (state.crew.length >= 4) return;
+            const newId = state.crew.length > 0 ? Math.max(...state.crew.map(m => m.id)) + 1 : 1;
+            state.crew.push({
+                id: newId,
+                name: 'BUILDER #' + (state.crew.length + 1),
+                role: 'CO-BUILDER',
+                avatar: '',
+                builderClass: 'THE CHAOS ARCHITECT',
+                builderId: generateRandomID(),
+                theme: 'chaos'
+            });
+            renderCrewList();
+            syncCardData();
+        }
+
+        function removeCrewMember(id) {
+            state.crew = state.crew.filter(m => m.id !== id);
+            renderCrewList();
+            syncCardData();
+        }
+
+        function updateCrewMember(index, field, value) {
+            state.crew[index][field] = value;
+            if (field === 'role') {
+                const meta = getThemeAndClass(value);
+                state.crew[index].theme = meta.theme;
+                state.crew[index].builderClass = meta.classText;
+            }
+            syncCardData();
+        }
+
+        // Generate dynamic Qrious QR Preview
+        let qrObj = null;
+        function generatePreviewQR(text) {
+            if (!qrObj) {
+                qrObj = new QRious({
+                    element: document.getElementById('qr-preview'),
+                    value: text,
+                    size: 150,
+                    background: '#ffffff',
+                    foreground: '#000000',
+                    level: 'H'
+                });
+            } else {
+                qrObj.value = text;
+            }
+        }
+
+        // Canonical share URL — uses the single getBuilderShareUrl function
+        function getShareURL() {
+            return getBuilderShareUrl(state.builderId);
+        }
+
+        // Load shared builder from hash route or query params (Viewer Mode)
+        async function loadSharedBadge(builderId) {
+            // Hide generator, show viewer immediately
+            document.getElementById('generator-view').classList.add('hidden');
+            document.getElementById('viewer-view').classList.remove('hidden');
+
+            const viewerPlacement = document.getElementById('viewer-card-placement');
+            // Show dynamic progress/loading screen in viewer
+            viewerPlacement.innerHTML = `
+                <div style="text-align:center; padding:60px 20px; width:100%; max-width:380px; margin:0 auto;" class="flex flex-col items-center justify-center gap-4">
+                    <span class="font-mono text-xs tracking-widest text-brandCyan bg-brandBlue/10 border border-brandBlue/25 px-4 py-1.5 rounded-full animate-pulse">VERIFYING DEPLOYMENT PROTOCOL</span>
+                    <div style="width:40px; height:40px; border:3px solid rgba(0,240,255,0.1); border-top-color:#00f0ff; border-radius:50%;" class="animate-spin"></div>
+                    <div class="font-mono text-[9px] text-textMuted uppercase tracking-wider">RESOLVING CLOUD ADDRESS: ${builderId}</div>
+                </div>
+            `;
+
+            // Try to load persisted data (local first, then fallback to network)
+            const result = await loadPersistedBuilder(builderId);
+            const data = (result && result.data) ? result.data : (result && !result.status ? result : null);
+
+            if (!data) {
+                if (result && result.status === 'error') {
+                    // Network failure — show UNABLE TO LOAD BUILDER state with Retry option
+                    viewerPlacement.innerHTML = `
+                        <div style="text-align:center; padding:40px 20px; width:100%; max-width:380px; margin:0 auto;" class="flex flex-col items-center justify-center gap-4 bg-cardDark/40 border border-borderDark/60 rounded-2xl">
+                            <span class="font-mono text-[10px] tracking-wider text-amber-500 bg-amber-500/10 border border-amber-500/25 px-3 py-1 rounded-full uppercase">NETWORK ERROR</span>
+                            <div class="font-sora" style="font-size:20px; font-weight:800; color:#f3f4f6; text-transform:uppercase; letter-spacing:-0.02em;">UNABLE TO LOAD BUILDER</div>
+                            <div class="font-mono text-[9px] text-textMuted uppercase tracking-wider">ADDRESS: ${builderId}</div>
+                            <p class="font-hanken" style="font-size:12px; color:#9ca3af; line-height:1.5;">Unable to reach the persistence service. Please check your network connection and retry.</p>
+                            <button onclick="loadSharedBadge('${builderId}')" class="mt-2 border border-brandCyan/30 bg-brandCyan/10 hover:bg-brandCyan/20 text-brandCyan font-sora font-semibold text-xs uppercase tracking-widest py-3 px-6 rounded-xl transition-all cursor-pointer">↻ RETRY</button>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Builder genuinely not found — show BUILDER ID NOT FOUND
+                viewerPlacement.innerHTML = `
+                    <div style="text-align:center; padding:40px 20px; width:100%; max-width:380px; margin:0 auto;" class="flex flex-col items-center justify-center gap-4 bg-cardDark/40 border border-borderDark/60 rounded-2xl">
+                        <span class="font-mono text-[10px] tracking-wider text-rose-500 bg-rose-500/10 border border-rose-500/25 px-3 py-1 rounded-full uppercase">LOOKUP FAILED</span>
+                        <div class="font-sora" style="font-size:20px; font-weight:800; color:#f3f4f6; text-transform:uppercase; letter-spacing:-0.02em;">BUILDER ID NOT FOUND</div>
+                        <div class="font-mono text-[9px] text-textMuted uppercase tracking-wider">ADDRESS: ${builderId}</div>
+                        <p class="font-hanken" style="font-size:12px; color:#9ca3af; line-height:1.5;">This Builder ID does not exist, has expired, or was created on a different device without internet connectivity.</p>
+                        <a href="/" class="mt-2 border border-brandCyan/30 bg-brandCyan/5 hover:bg-brandCyan/10 text-brandCyan font-sora font-semibold text-xs uppercase tracking-widest py-3 px-6 rounded-xl transition-all">CREATE YOUR OWN BUILDER ID →</a>
+                    </div>
+                `;
+                return;
+            }
+
+            // Restore state from persisted data
+            state.mode = data.mode || 'solo';
+            state.builderId = data.builderId || builderId;
+            state.name = data.name || 'BUILDER';
+            state.role = data.role || 'DEVELOPER';
+            state.builderClass = data.builderClass || 'THE CHAOS ARCHITECT';
+            state.builderManifesto = data.builderManifesto || MANIFESTOS[state.builderClass] || '"Collaborate, design, build, ship."';
+            state.theme = data.theme || 'chaos';
+            state.avatar = data.avatar || '';
+
+            if (state.mode === 'crew' && data.crew) {
+                state.crew = data.crew.map((m, i) => ({
+                    id: i + 1,
+                    name: m.name || 'CREW BUILDER',
+                    role: m.role || 'DEVELOPER',
+                    builderClass: m.builderClass || 'THE CHAOS ARCHITECT',
+                    builderId: m.builderId || generateRandomID(),
+                    theme: m.theme || 'chaos',
+                    avatar: m.avatar || ''
+                }));
+            }
+
+            // Build standalone card for viewer using buildResultCard
+            const snap = {
+                name: state.name,
+                role: state.role,
+                builderClass: state.builderClass,
+                manifesto: state.builderManifesto,
+                builderId: state.builderId,
+                theme: state.theme,
+                avatar: state.avatar,
+                mode: state.mode,
+                crew: state.crew
+            };
+            const card = buildResultCard(snap);
+            card.style.height = 'auto';
+            card.style.maxHeight = '600px';
+            card.style.width = '100%';
+            card.style.maxWidth = '380px';
+
+            viewerPlacement.innerHTML = '';
+            viewerPlacement.appendChild(card);
+
+            // Render QR on the viewer card
+            const qrCanvas = card.querySelector('#result-qr-canvas');
+            if (qrCanvas) {
+                new QRious({
+                    element: qrCanvas,
+                    value: getBuilderShareUrl(state.builderId),
+                    size: 150,
+                    background: '#ffffff',
+                    foreground: '#000000',
+                    level: 'H'
+                });
+            }
+        }
+
+        // Start Badge Creation Sequence with validations
+        function startGeneration() {
+            hideError();
+
+            // Validations
+            if (state.mode === 'solo') {
+                const nameVal = document.getElementById('input-name').value.trim();
+                const roleVal = document.getElementById('input-role').value.trim();
+                
+                if (!nameVal || nameVal === 'YOUR NAME') {
+                    showError("Please enter your name.");
+                    return;
+                }
+                if (!roleVal || roleVal === 'STACK / ROLE') {
+                    showError("Tell us what you build.");
+                    return;
+                }
+                if (!state.avatar) {
+                    showError("Add your Builder photo.");
+                    return;
+                }
+            } else {
+                const crewNameVal = document.getElementById('input-crew-name').value.trim();
+                if (!crewNameVal || crewNameVal === 'ALPHA CREW') {
+                    showError("Please enter your crew name.");
+                    return;
+                }
+                for (let i = 0; i < state.crew.length; i++) {
+                    const m = state.crew[i];
+                    if (!m.name || m.name.startsWith('BUILDER #')) {
+                        showError(`Please enter a name for Member #${i + 1}.`);
+                        return;
+                    }
+                    if (!m.role || m.role === 'CO-BUILDER') {
+                        showError(`Please specify a role/stack for Member #${i + 1}.`);
+                        return;
+                    }
+                    if (!m.avatar) {
+                        showError(`Please upload a photo for Member #${i + 1}.`);
+                        return;
+                    }
+                }
+            }
+
+            // Hide the generator page completely to prevent overlaps and background scroll
+            document.getElementById('generator-view').classList.add('hidden');
+            document.body.style.overflow = 'hidden';
+
+            // Check reduced motion — skip animation, go straight to result
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                syncCardData();
+                persistBuilderData();
+                document.getElementById('reveal-view').style.display = 'block';
+                document.getElementById('reveal-animation-container').style.display = 'none';
+                showFinalBadge();
+                return;
+            }
+
+            // Sync fresh data and persist for sharing
+            syncCardData();
+            persistBuilderData();
+
+            const overlay = document.getElementById('loading-overlay');
+            const linesDiv = document.getElementById('terminal-lines');
+            linesDiv.innerHTML = '';
+            overlay.classList.remove('hidden');
+
+            // Quick terminal progress logs
+            const p1 = document.createElement('p');
+            p1.innerText = '> BUILDING YOUR BUILDER ID...';
+            linesDiv.appendChild(p1);
+
+            setTimeout(() => {
+                const p2 = document.createElement('p');
+                p2.innerText = '> IDENTITY READY';
+                p2.className = 'text-emerald-400 font-bold';
+                linesDiv.appendChild(p2);
+            }, 300);
+
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+                triggerRevealView();
+            }, 750);
+        }
+
+        // Trigger Reveal Screen with temporary word reveal
+        function triggerRevealView() {
+            // Show the reveal overlay (using inline style to avoid Tailwind class conflicts)
+            const revealEl = document.getElementById('reveal-view');
+            revealEl.style.display = 'block';
+
+            // Show phase-1 animation, hide phase-2 result
+            const animContainer = document.getElementById('reveal-animation-container');
+            const resultContainer = document.getElementById('reveal-result-container');
+            animContainer.style.opacity = '1';
+            animContainer.style.display = 'flex';
+            resultContainer.style.display = 'none';
+            resultContainer.style.opacity = '0';
+
+            const wordsDiv = document.getElementById('reveal-class-words');
+            wordsDiv.innerHTML = '';
+
+            const words = state.builderClass.split(' ');
+            let idx = 0;
+
+            const printInterval = setInterval(() => {
+                if (idx < words.length) {
+                    const span = document.createElement('div');
+                    span.innerText = words[idx];
+                    span.style.cssText = 'font-family:"Sora",sans-serif; font-size:clamp(36px,8vw,72px); font-weight:800; text-transform:uppercase; letter-spacing:-0.03em; line-height:1; background:linear-gradient(to right,#0052ff,#00f0ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; opacity:0; transform:translateY(16px); transition:opacity 0.25s ease, transform 0.25s ease;';
+                    wordsDiv.appendChild(span);
+                    // Trigger reflow then animate in
+                    span.offsetHeight;
+                    span.style.opacity = '1';
+                    span.style.transform = 'translateY(0)';
+                    idx++;
+                } else {
+                    clearInterval(printInterval);
+                    // Hold 800ms then fade out the class reveal completely
+                    setTimeout(() => {
+                        animContainer.style.transition = 'opacity 0.3s ease';
+                        animContainer.style.opacity = '0';
+                        setTimeout(() => {
+                            animContainer.style.display = 'none';
+                            showFinalBadge();
+                        }, 320);
+                    }, 800);
+                }
+            }, 220);
+        }
+
+        // Build and show the final result card — standalone, not a live-preview clone
+        function showFinalBadge() {
+            const placement = document.getElementById('reveal-card-placement');
+            placement.innerHTML = '';
+
+            // Build a self-contained card element using a snapshot of current state
+            const snap = {
+                name: state.name,
+                role: state.role,
+                builderClass: state.builderClass,
+                manifesto: state.builderManifesto,
+                builderId: state.builderId,
+                theme: state.theme,
+                avatar: state.avatar,
+                mode: state.mode,
+                crew: state.crew
+            };
+
+            // Wrapper scales the 4:5 card to fill available height without clipping
+            const wrapper = document.createElement('div');
+            wrapper.style.cssText = 'height:100%; width:100%; display:flex; align-items:center; justify-content:center;';
+
+            const card = buildResultCard(snap);
+            wrapper.appendChild(card);
+            placement.appendChild(wrapper);
+
+            // Render QR onto the card's canvas
+            const qrCanvas = card.querySelector('#result-qr-canvas');
+            if (qrCanvas) {
+                new QRious({
+                    element: qrCanvas,
+                    value: getShareURL(),
+                    size: 150,
+                    background: '#ffffff',
+                    foreground: '#000000',
+                    level: 'H'
+                });
+            }
+
+            // Show result container
+            const resultContainer = document.getElementById('reveal-result-container');
+            resultContainer.style.display = 'flex';
+            resultContainer.style.opacity = '0';
+            setTimeout(() => {
+                resultContainer.style.opacity = '1';
+            }, 30);
+        }
+
+        // Build a standalone result card element from a data snapshot
+        function buildResultCard(snap) {
+            const themeAccents = {
+                neural: '#00f0ff',
+                pixel: '#ff8fe3',
+                kernel: '#39ff14',
+                protocol: '#ffd700',
+                hardware: '#ff6b35',
+                chaos: '#ff3366'
+            };
+            const themeBgs = {
+                neural: '#080d1a',
+                pixel: '#15081a',
+                kernel: '#07150a',
+                protocol: '#1a1608',
+                hardware: '#1a0f08',
+                chaos: '#1a080d'
+            };
+            const accent = themeAccents[snap.theme] || '#ff3366';
+            const bg = themeBgs[snap.theme] || '#1a080d';
+
+            const card = document.createElement('div');
+            // Size: respect 4:5 ratio, fit within parent using CSS
+            card.style.cssText = `
+                background: ${bg};
+                border: 1px solid ${accent}33;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                box-shadow: 0 16px 40px rgba(0,0,0,0.75);
+                position: relative;
+                aspect-ratio: 4/5;
+                height: 100%;
+                max-height: 100%;
+                max-width: calc(100% * 4/5);
+                --accent-color: ${accent};
+                --bg-card: ${bg};
+            `;
+
+            // Corner markers
+            const corners = [
+                'top:0;left:0;border-top:2px solid;border-left:2px solid;',
+                'top:0;right:0;border-top:2px solid;border-right:2px solid;',
+                'bottom:0;left:0;border-bottom:2px solid;border-left:2px solid;',
+                'bottom:0;right:0;border-bottom:2px solid;border-right:2px solid;'
+            ];
+            corners.forEach(c => {
+                const el = document.createElement('div');
+                el.style.cssText = `position:absolute;width:28px;height:28px;${c}border-color:${accent};opacity:0.6;pointer-events:none;z-index:2;`;
+                card.appendChild(el);
+            });
+
+            // Grid overlay
+            const grid = document.createElement('div');
+            grid.className = 'tech-grid';
+            grid.style.cssText = 'position:absolute;inset:0;opacity:0.08;pointer-events:none;z-index:1;';
+            card.appendChild(grid);
+
+            // --- CARD HEADER ---
+            const header = document.createElement('div');
+            header.style.cssText = `display:flex; justify-content:space-between; align-items:flex-start; padding:16px 20px 12px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:3; flex-shrink:0;`;
+            header.innerHTML = `
+                <div>
+                    <div class="font-sora" style="font-size:11px;font-weight:800;letter-spacing:0.12em;color:#f3f4f6;">HH GOA 2026</div>
+                    <div class="font-mono" style="font-size:8px;color:#9ca3af;letter-spacing:0.1em;margin-top:1px;">BUILDER ID</div>
+                </div>
+                <div class="font-mono" style="font-size:9px;background:rgba(0,0,0,0.4);border:1px solid rgba(26,30,40,0.8);color:${accent};padding:3px 8px;border-radius:4px;letter-spacing:0.1em;font-weight:700;">${snap.builderId}</div>
+            `;
+            card.appendChild(header);
+
+            // --- CARD BODY ---
+            const body = document.createElement('div');
+            body.style.cssText = 'flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; padding:12px 16px; gap:10px; overflow:hidden; z-index:3;';
+
+            if (snap.mode === 'solo') {
+                // Avatar frame
+                const avatarWrap = document.createElement('div');
+                avatarWrap.style.cssText = 'position:relative; flex-shrink:0;';
+                const avatarOffset = document.createElement('div');
+                avatarOffset.style.cssText = `position:absolute; inset:-4px; border:1px solid ${accent}55; border-radius:10px; transform:translate(6px,6px);`;
+                avatarWrap.appendChild(avatarOffset);
+                const avatarFrame = document.createElement('div');
+                avatarFrame.style.cssText = `width:140px; height:140px; border:1px solid ${accent}; border-radius:8px; overflow:hidden; background:#000; position:relative;`;
+                if (snap.avatar) {
+                    const img = document.createElement('img');
+                    img.src = snap.avatar;
+                    img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+                    avatarFrame.appendChild(img);
+                } else {
+                    avatarFrame.style.display = 'flex';
+                    avatarFrame.style.alignItems = 'center';
+                    avatarFrame.style.justifyContent = 'center';
+                    avatarFrame.innerHTML = `<svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="${accent}" stroke-width="1.5" opacity="0.7">${FALLBACK_AVATARS[snap.theme] || ''}</svg>`;
+                }
+                const dot = document.createElement('div');
+                dot.style.cssText = 'position:absolute;bottom:4px;right:4px;width:10px;height:10px;border-radius:50%;background:#10b981;border:2px solid #000;z-index:10;';
+                avatarFrame.appendChild(dot);
+                avatarWrap.appendChild(avatarFrame);
+                body.appendChild(avatarWrap);
+
+                // Name / Role block
+                const infoBlock = document.createElement('div');
+                infoBlock.style.cssText = 'text-align:center; width:100%;';
+                infoBlock.innerHTML = `
+                    <div class="font-mono" style="font-size:7px;letter-spacing:0.15em;color:#9ca3af;text-transform:uppercase;margin-bottom:2px;">BUILDER PROFILE</div>
+                    <div class="font-sora" style="font-size:clamp(13px,2.5vw,19px);font-weight:800;text-transform:uppercase;letter-spacing:-0.02em;color:#f3f4f6;line-height:1;">${snap.name}</div>
+                    <div class="font-mono" style="font-size:8px;color:${accent};text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-top:3px;">${snap.role}</div>
+                `;
+                body.appendChild(infoBlock);
+
+                // Separator
+                const sep = document.createElement('div');
+                sep.style.cssText = 'width:100%;height:1px;background:rgba(255,255,255,0.1);flex-shrink:0;';
+                body.appendChild(sep);
+
+                // Builder Class stacked
+                const classBlock = document.createElement('div');
+                classBlock.style.cssText = 'width:100%; display:flex; flex-direction:column; gap:1px; align-items:flex-start;';
+                snap.builderClass.split(' ').forEach(word => {
+                    const w = document.createElement('div');
+                    w.className = 'font-sora';
+                    w.style.cssText = `font-size:clamp(14px,3vw,22px);font-weight:800;text-transform:uppercase;letter-spacing:-0.03em;line-height:1;color:${accent};`;
+                    w.innerText = word;
+                    classBlock.appendChild(w);
+                });
+                body.appendChild(classBlock);
+
+                // Manifesto
+                const manifesto = document.createElement('p');
+                manifesto.className = 'font-hanken';
+                manifesto.style.cssText = 'font-size:10px;font-style:italic;color:#9ca3af;margin:0;line-height:1.4;width:100%;';
+                manifesto.innerText = snap.manifesto;
+                body.appendChild(manifesto);
+
+            } else {
+                // Crew grid
+                const grid2 = document.createElement('div');
+                grid2.style.cssText = 'display:grid;grid-template-columns:repeat(2,1fr);gap:8px;width:100%;flex:1;min-height:0;overflow:hidden;';
+                snap.crew.forEach(m => {
+                    const mCard = document.createElement('div');
+                    mCard.style.cssText = `border:1px solid ${accent}33;border-radius:8px;background:rgba(0,0,0,0.4);display:flex;flex-direction:column;align-items:center;padding:8px;gap:6px;overflow:hidden;min-height:0;`;
+                    const mAvWrap = document.createElement('div');
+                    mAvWrap.style.cssText = `width:52px;height:52px;border-radius:6px;border:1px solid ${accent}66;overflow:hidden;background:#000;flex-shrink:0;`;
+                    if (m.avatar) {
+                        const mImg = document.createElement('img');
+                        mImg.src = m.avatar;
+                        mImg.style.cssText = 'width:100%;height:100%;object-fit:cover;';
+                        mAvWrap.appendChild(mImg);
+                    }
+                    mCard.appendChild(mAvWrap);
+                    const mInfo = document.createElement('div');
+                    mInfo.style.cssText = 'text-align:center;width:100%;';
+                    mInfo.innerHTML = `
+                        <div class="font-sora" style="font-size:9px;font-weight:800;text-transform:uppercase;color:#f3f4f6;line-height:1.1;word-break:break-word;">${m.name}</div>
+                        <div class="font-mono" style="font-size:7px;color:#9ca3af;text-transform:uppercase;margin-top:2px;">${m.role}</div>
+                    `;
+                    mCard.appendChild(mInfo);
+                    grid2.appendChild(mCard);
+                });
+                body.appendChild(grid2);
+
+                const crewLabel = document.createElement('div');
+                crewLabel.style.cssText = 'text-align:center;flex-shrink:0;';
+                crewLabel.innerHTML = `
+                    <div class="font-sora" style="font-size:clamp(13px,2.5vw,18px);font-weight:800;color:#f3f4f6;text-transform:uppercase;">${snap.name}</div>
+                    <div class="font-mono" style="font-size:8px;color:${accent};text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;">COLLECTIVE CREW CREDENTIAL</div>
+                `;
+                body.appendChild(crewLabel);
+            }
+
+            card.appendChild(body);
+
+            // --- CARD FOOTER ---
+            const footer = document.createElement('div');
+            footer.style.cssText = `display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:rgba(0,0,0,0.4);border-top:1px solid rgba(255,255,255,0.07);z-index:3;flex-shrink:0;`;
+            footer.innerHTML = `
+                <div>
+                    <div class="font-mono" style="font-size:8px;color:#f3f4f6;font-weight:700;">HH26 // GOA</div>
+                    <div class="font-mono" style="font-size:6px;color:#9ca3af;text-transform:uppercase;letter-spacing:0.08em;margin-top:1px;">#FrameInGoa</div>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;">
+                    <span class="font-mono" style="font-size:6px;color:#9ca3af;text-align:right;max-width:60px;line-height:1.3;">SCAN TO VIEW BUILDER</span>
+                    <div style="width:32px;height:32px;background:#fff;border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                        <canvas id="result-qr-canvas" style="width:100%;height:100%;"></canvas>
+                    </div>
+                </div>
+            `;
+            card.appendChild(footer);
+
+            return card;
+        }
+
+        // Reset and clear builder inputs, restoring the generator
+        function resetGenerator() {
+            document.body.style.overflow = '';
+            // Hide result overlay and show generator
+            document.getElementById('reveal-view').style.display = 'none';
+            document.getElementById('generator-view').classList.remove('hidden');
+            // Clear result placement to free memory
+            document.getElementById('reveal-card-placement').innerHTML = '';
+            state.builderId = generateRandomID();
+            syncCardData();
+        }
+
+        // Interactive 3D Card tilt
+        function initCardTilt() {
+            const card = document.getElementById('preview-card');
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const angleX = (yc - y) / 10;
+                const angleY = (x - xc) / 10;
+                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            });
+        }
+
+        // Intelligent Cover Cropping for Canvas Context
+        function drawCoverImage(ctx, img, x, y, w, h) {
+            const imgRatio = img.width / img.height;
+            const containerRatio = w / h;
+            let sx, sy, sw, sh;
+            if (imgRatio > containerRatio) {
+                sh = img.height;
+                sw = sh * containerRatio;
+                sx = (img.width - sw) / 2;
+                sy = 0;
+            } else {
+                sw = img.width;
+                sh = sw / containerRatio;
+                sx = 0;
+                sy = (img.height - sh) / 2;
+            }
+            ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
+        }
+
+        // Dynamic high-DPI Canvas Rendering Engine (1200x1500px resolution)
+        async function drawBadgeCanvas() {
+            const canvas = document.getElementById('export-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set dimensions: Solo is 1200x1500px, Crew is 1200x800px
+            const width = 1200;
+            const height = state.mode === 'solo' ? 1500 : 800;
+            canvas.width = width;
+            canvas.height = height;
+
+            // Wait for font styling loaded
+            await document.fonts.ready;
+
+            const themeColors = {
+                neural: { bg: '#080d1a', border: '#00f0ff', accent: '#00f0ff' },
+                pixel: { bg: '#15081a', border: '#ff8fe3', accent: '#ff8fe3' },
+                kernel: { bg: '#07150a', border: '#39ff14', accent: '#39ff14' },
+                protocol: { bg: '#1a1608', border: '#ffd700', accent: '#ffd700' },
+                hardware: { bg: '#1a0f08', border: '#ff6b35', accent: '#ff6b35' },
+                chaos: { bg: '#1a080d', border: '#ff3366', accent: '#ff3366' }
+            };
+
+            const colors = themeColors[state.theme] || themeColors.chaos;
+
+            // Draw Base Card Panel background
+            ctx.fillStyle = colors.bg;
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw tech grid overlay
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.02)';
+            ctx.lineWidth = 1;
+            const gridSpacing = 40;
+            for (let x = 0; x < width; x += gridSpacing) {
+                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, height); ctx.stroke();
+            }
+            for (let y = 0; y < height; y += gridSpacing) {
+                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(width, y); ctx.stroke();
+            }
+
+            // Draw outer neon border
+            ctx.strokeStyle = colors.border;
+            ctx.lineWidth = 16;
+            ctx.strokeRect(10, 10, width - 20, height - 20);
+
+            // Draw corner crosshairs
+            ctx.strokeStyle = colors.accent;
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(30, 30); ctx.lineTo(60, 30); ctx.moveTo(30, 30); ctx.lineTo(30, 60);
+            ctx.moveTo(width - 30, 30); ctx.lineTo(width - 60, 30); ctx.moveTo(width - 30, 30); ctx.lineTo(width - 30, 60);
+            ctx.moveTo(30, height - 30); ctx.lineTo(60, height - 30); ctx.moveTo(30, height - 30); ctx.lineTo(30, height - 60);
+            ctx.moveTo(width - 30, height - 30); ctx.lineTo(width - 60, height - 30); ctx.moveTo(width - 30, height - 30); ctx.lineTo(width - 30, height - 60);
+            ctx.stroke();
+
+            // RENDER: SOLO CARD LAYOUT (1200x1500px, aspect 4:5)
+            if (state.mode === 'solo') {
+                
+                // Draw Header Name and ID
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '800 36px "Sora", sans-serif';
+                ctx.fillText('HH GOA 2026', 80, 100);
+                
+                ctx.font = '500 20px "JetBrains Mono", monospace';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.fillText('BUILDER ID', 80, 140);
+
+                ctx.fillStyle = colors.accent;
+                ctx.font = '700 28px "JetBrains Mono", monospace';
+                ctx.textAlign = 'right';
+                ctx.fillText(state.builderId, width - 80, 100);
+                ctx.textAlign = 'left';
+
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.beginPath(); ctx.moveTo(80, 175); ctx.lineTo(width - 80, 175); ctx.stroke();
+
+                // Draw Avatar Container Frame Offset (Occupies ~35% height)
+                const frameSize = 500;
+                const frameX = (width - frameSize) / 2;
+                const frameY = 220;
+
+                ctx.strokeStyle = colors.accent;
+                ctx.lineWidth = 2;
+                ctx.strokeRect(frameX + 15, frameY + 15, frameSize, frameSize);
+                
+                ctx.fillStyle = '#000000';
+                ctx.fillRect(frameX, frameY, frameSize, frameSize);
+                ctx.strokeRect(frameX, frameY, frameSize, frameSize);
+
+                // Draw Avatar image with Cover cropping
+                if (state.avatar) {
+                    const avatarImg = await loadImgAsync(state.avatar);
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.rect(frameX, frameY, frameSize, frameSize);
+                    ctx.clip();
+                    drawCoverImage(ctx, avatarImg, frameX, frameY, frameSize, frameSize);
+                    ctx.restore();
+                    ctx.strokeStyle = colors.accent;
+                    ctx.lineWidth = 2;
+                    ctx.strokeRect(frameX, frameY, frameSize, frameSize);
+                } else {
+                    // Draw vector fallback avatar directly to Canvas context
+                    ctx.save();
+                    ctx.translate(frameX, frameY);
+                    ctx.scale(frameSize / 100, frameSize / 100);
+                    ctx.strokeStyle = colors.accent;
+                    ctx.lineWidth = 1.5;
+                    drawFallbackSVGOnCanvas(ctx, state.theme);
+                    ctx.restore();
+                }
+
+                // Scanlines on Avatar
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.12)';
+                for (let sy = frameY; sy < frameY + frameSize; sy += 8) {
+                    ctx.fillRect(frameX, sy, frameSize, 3);
+                }
+
+                // Draw User Name and Role (Center-aligned and connected)
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.font = '500 18px "JetBrains Mono", monospace';
+                ctx.textAlign = 'center';
+                ctx.fillText('BUILDER PROFILE', width / 2, 790);
+
+                ctx.fillStyle = '#ffffff';
+                let nameFontSize = 56;
+                ctx.font = `800 ${nameFontSize}px "Sora", sans-serif`;
+                while (ctx.measureText(state.name).width > 900 && nameFontSize > 24) {
+                    nameFontSize -= 2;
+                    ctx.font = `800 ${nameFontSize}px "Sora", sans-serif`;
+                }
+                ctx.fillText(state.name, width / 2, 850);
+
+                ctx.fillStyle = colors.accent;
+                let roleFontSize = 26;
+                ctx.font = `700 ${roleFontSize}px "JetBrains Mono", monospace`;
+                while (ctx.measureText(state.role).width > 900 && roleFontSize > 14) {
+                    roleFontSize -= 1;
+                    ctx.font = `700 ${roleFontSize}px "JetBrains Mono", monospace`;
+                }
+                ctx.fillText(state.role, width / 2, 900);
+                ctx.textAlign = 'left';
+
+                // Draw Card Body separator
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.beginPath(); ctx.moveTo(80, 940); ctx.lineTo(width - 80, 940); ctx.stroke();
+
+                // Builder Class in large stacked editorial typography
+                ctx.fillStyle = colors.accent;
+                ctx.font = '800 84px "Sora", sans-serif';
+                const words = state.builderClass.split(' ');
+                let classY = 1025;
+                words.forEach((w, idx) => {
+                    ctx.fillText(w, 80, classY + (idx * 90));
+                });
+
+                // Manifesto Text
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                ctx.font = 'italic 26px "Hanken Grotesk", sans-serif';
+                ctx.fillText(state.builderManifesto, 80, classY + (words.length * 90) + 10);
+
+                // Draw Card Footer line & info
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.beginPath(); ctx.moveTo(80, 1330); ctx.lineTo(width - 80, 1330); ctx.stroke();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '800 24px "Sora", sans-serif';
+                ctx.fillText('HH26 // GOA', 80, 1385);
+
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.font = '700 16px "JetBrains Mono", monospace';
+                ctx.fillText('BUILD / SHIP / LAUNCH', 80, 1425);
+
+                // Create dynamic QR code image using canonical share URL
+                const qrImage = await generateQRImage(getBuilderShareUrl(state.builderId));
+                ctx.drawImage(qrImage, width - 210, 1345, 130, 130);
+
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.font = '700 11px "JetBrains Mono", monospace';
+                ctx.textAlign = 'right';
+                ctx.fillText('SCAN TO VIEW BUILDER', width - 230, 1415);
+                ctx.textAlign = 'left';
+
+            } else {
+                // RENDER: CREW CARD LAYOUT (Landscape 1200x800, aspect 3:2)
+                
+                // Draw Header Name and ID
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '800 44px "Sora", sans-serif';
+                ctx.fillText(state.name, 80, 100);
+                
+                ctx.font = '500 22px "JetBrains Mono", monospace';
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.fillText('COLLECTIVE CREW CREDENTIAL', 80, 140);
+
+                ctx.fillStyle = colors.accent;
+                ctx.font = '700 28px "JetBrains Mono", monospace';
+                ctx.textAlign = 'right';
+                ctx.fillText(state.builderId, width - 80, 100);
+                ctx.textAlign = 'left';
+
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.beginPath(); ctx.moveTo(80, 180); ctx.lineTo(width - 80, 180); ctx.stroke();
+
+                // Draw Grid of Crew members
+                const numMembers = state.crew.length;
+                const cardWidth = 230;
+                const cardHeight = 360;
+                const startX = 80;
+                const spacingX = 270;
+                const startY = 220;
+
+                for (let i = 0; i < numMembers; i++) {
+                    const member = state.crew[i];
+                    const cx = startX + (i * spacingX);
+                    const cy = startY;
+
+                    // Draw inner member border box
+                    ctx.strokeStyle = colors.accent;
+                    ctx.lineWidth = 2;
+                    ctx.strokeRect(cx, cy, cardWidth, cardHeight);
+
+                    // Avatar picture frame inside box
+                    const picX = cx + 25;
+                    const picY = cy + 30;
+                    const picSize = 180;
+
+                    ctx.fillStyle = '#000000';
+                    ctx.fillRect(picX, picY, picSize, picSize);
+                    ctx.strokeRect(picX, picY, picSize, picSize);
+
+                    if (member.avatar) {
+                        const mAvatar = await loadImgAsync(member.avatar);
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.rect(picX, picY, picSize, picSize);
+                        ctx.clip();
+                        drawCoverImage(ctx, mAvatar, picX, picY, picSize, picSize);
+                        ctx.restore();
+                        ctx.strokeStyle = colors.accent;
+                        ctx.lineWidth = 2;
+                        ctx.strokeRect(picX, picY, picSize, picSize);
+                    } else {
+                        ctx.save();
+                        ctx.translate(picX, picY);
+                        ctx.scale(picSize / 100, picSize / 100);
+                        ctx.strokeStyle = colors.accent;
+                        ctx.lineWidth = 1.5;
+                        drawFallbackSVGOnCanvas(ctx, member.theme || 'chaos');
+                        ctx.restore();
+                    }
+
+                    // Text Details for member with bounds checking
+                    ctx.fillStyle = '#ffffff';
+                    let mNameFontSize = 20;
+                    ctx.font = `800 ${mNameFontSize}px "Sora", sans-serif`;
+                    while (ctx.measureText(member.name).width > 190 && mNameFontSize > 12) {
+                        mNameFontSize -= 1;
+                        ctx.font = `800 ${mNameFontSize}px "Sora", sans-serif`;
+                    }
+                    ctx.fillText(member.name, cx + 20, cy + 260);
+
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                    let mRoleFontSize = 14;
+                    ctx.font = `500 ${mRoleFontSize}px "JetBrains Mono", monospace`;
+                    while (ctx.measureText(member.role).width > 190 && mRoleFontSize > 9) {
+                        mRoleFontSize -= 1;
+                        ctx.font = `500 ${mRoleFontSize}px "JetBrains Mono", monospace`;
+                    }
+                    ctx.fillText(member.role, cx + 20, cy + 295);
+
+                    ctx.fillStyle = colors.accent;
+                    ctx.font = '700 12px "JetBrains Mono", monospace';
+                    ctx.fillText(member.builderClass.replace('THE ', ''), cx + 20, cy + 330);
+                }
+
+                // Draw Footer controls
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.beginPath(); ctx.moveTo(80, 620); ctx.lineTo(width - 80, 620); ctx.stroke();
+
+                ctx.fillStyle = '#ffffff';
+                ctx.font = '800 22px "Sora", sans-serif';
+                ctx.fillText('BUILD SESSION: 2026 // GOA // SHIPPED', 80, 680);
+
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.font = '700 14px "JetBrains Mono", monospace';
+                ctx.fillText('TEAM COLLECTIVE CREDENTIAL // #FrameInGoa', 80, 715);
+
+                // Create dynamic QR code image using canonical share URL
+                const qrImage = await generateQRImage(getBuilderShareUrl(state.builderId));
+                ctx.drawImage(qrImage, width - 200, 630, 120, 120);
+            }
+        }
+
+        // Draw fallback designs directly inside Canvas Context
+        function drawFallbackSVGOnCanvas(ctx, theme) {
+            if (theme === 'neural') {
+                ctx.beginPath(); ctx.arc(50, 40, 15, 0, Math.PI * 2); ctx.stroke();
+                ctx.beginPath(); ctx.arc(25, 70, 8, 0, Math.PI * 2); ctx.stroke();
+                ctx.beginPath(); ctx.arc(75, 70, 8, 0, Math.PI * 2); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(40, 50); ctx.lineTo(28, 63); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(60, 50); ctx.lineTo(72, 63); ctx.stroke();
+            } else if (theme === 'pixel') {
+                ctx.beginPath(); ctx.moveTo(50, 15); ctx.lineTo(80, 65); ctx.lineTo(20, 65); ctx.closePath(); ctx.stroke();
+                ctx.beginPath(); ctx.arc(50, 45, 10, 0, Math.PI * 2); ctx.stroke();
+            } else if (theme === 'kernel') {
+                ctx.strokeRect(25, 25, 50, 50);
+                ctx.beginPath(); ctx.moveTo(35, 45); ctx.lineTo(45, 50); ctx.lineTo(35, 55); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(48, 55); ctx.lineTo(60, 55); ctx.stroke();
+            } else if (theme === 'protocol') {
+                ctx.beginPath(); ctx.arc(50, 50, 30, 0, Math.PI * 2); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(50, 32); ctx.lineTo(50, 55); ctx.moveTo(42, 42); ctx.lineTo(58, 42); ctx.stroke();
+            } else if (theme === 'hardware') {
+                ctx.strokeRect(30, 30, 40, 40);
+                ctx.beginPath(); ctx.moveTo(20, 40); ctx.lineTo(30, 40); ctx.moveTo(20, 50); ctx.lineTo(30, 50); ctx.moveTo(20, 60); ctx.lineTo(30, 60); ctx.stroke();
+            } else {
+                // Chaos (Default)
+                ctx.beginPath(); ctx.moveTo(25, 25); ctx.lineTo(75, 35); ctx.lineTo(60, 75); ctx.lineTo(30, 65); ctx.closePath(); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(25, 25); ctx.lineTo(60, 75); ctx.stroke();
+            }
+        }
+
+        // Image loader promise
+        function loadImgAsync(src) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.crossOrigin = "anonymous";
+                img.onload = () => resolve(img);
+                img.onerror = (e) => reject(e);
+                img.src = src;
+            });
+        }
+
+        // Generate Qrious QR code as image element
+        function generateQRImage(text) {
+            return new Promise((resolve) => {
+                const qr = new QRious({
+                    value: text,
+                    size: 200,
+                    background: '#ffffff',
+                    foreground: '#000000',
+                    level: 'H'
+                });
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.src = qr.toDataURL();
+            });
+        }
+
+        // Download generated card PNG (Sanitized Filename check)
+        async function downloadBadge() {
+            try {
+                await drawBadgeCanvas();
+                const canvas = document.getElementById('export-canvas');
+                const link = document.createElement('a');
+                
+                // Sanitize filename
+                const sanitized = state.name.trim().replace(/[^a-zA-Z0-9]/g, '-').replace(/-+/g, '-');
+                link.download = `HH-Goa-2026-Builder-ID-${sanitized}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            } catch (e) {
+                console.error("Canvas export failed: ", e);
+                showError("Export error. Ensure your upload images are local files or CORS compliant.");
+            }
+        }
+
+        // Share Builder ID to Twitter/X platform
+        function shareToX() {
+            const shareText = getShareText();
+            window.open(`https://twitter.com/intent/tweet?text=${shareText}`, '_blank');
+        }
+
+        function getShareText() {
+            const url = getBuilderShareUrl(state.builderId);
+            return encodeURIComponent(`I just created my HH Goa 2026 Builder ID. Ready to build something that matters.\n\n${url}\n\n#FrameInGoa`);
+        }
+    </script>
+</body>
+</html>
