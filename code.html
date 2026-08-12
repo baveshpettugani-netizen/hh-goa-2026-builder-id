@@ -193,7 +193,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="flex flex-col gap-2">
                                 <label class="font-mono text-xs tracking-widest text-textMuted uppercase">01 / Your Name</label>
-                                <input id="input-name" type="text" value="ALEX CHEN" class="bg-transparent border-0 border-b-2 border-borderDark focus:border-brandBlue focus:ring-0 text-2xl font-sora font-semibold text-textLight px-0 py-2 placeholder-neutral-700 transition-colors w-full" placeholder="BAVESH" oninput="syncCardData()"/>
+                                <input id="input-name" type="text" value="" class="bg-transparent border-0 border-b-2 border-borderDark focus:border-brandBlue focus:ring-0 text-2xl font-sora font-semibold text-textLight px-0 py-2 placeholder-neutral-700 transition-colors w-full" placeholder="ENTER YOUR NAME" oninput="syncCardData()"/>
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label class="font-mono text-xs tracking-widest text-textMuted uppercase">02 / What do you build? (Stack/Role)</label>
@@ -322,7 +322,7 @@
                             <!-- User Info fields (Connected and clean) -->
                             <div class="w-full flex flex-col items-center text-center gap-0.5">
                                 <span class="font-mono text-[7px] tracking-widest text-textMuted uppercase">BUILDER PROFILE</span>
-                                <h4 id="card-name" class="font-sora text-xl font-extrabold uppercase tracking-tight text-textLight leading-none">ALEX CHEN</h4>
+                                <h4 id="card-name" class="font-sora text-xl font-extrabold uppercase tracking-tight text-textLight leading-none"></h4>
                                 <p id="card-role" class="font-mono text-[9px] text-[var(--accent-color)] uppercase tracking-wider font-semibold">AI/ML DEVELOPER</p>
                             </div>
                             
@@ -582,7 +582,7 @@
         // State Store
         const state = {
             mode: 'solo', // 'solo' or 'crew'
-            name: 'ALEX CHEN',
+            name: '',
             role: 'AI/ML DEVELOPER',
             avatar: '', // Base64 data URL
             builderClass: 'THE NEURAL ARCHITECT',
@@ -590,8 +590,8 @@
             builderId: 'HH26-BLD-07F2',
             theme: 'neural', // 'neural', 'pixel', 'kernel', 'protocol', 'hardware', 'chaos'
             crew: [
-                { id: 1, name: 'ALEX CHEN', role: 'FULL STACK DEV', avatar: '', builderClass: 'THE CHAOS ARCHITECT', builderId: 'HH26-BLD-71E9', theme: 'chaos' },
-                { id: 2, name: 'SARA RAO', role: 'UI/UX DESIGNER', avatar: '', builderClass: 'THE PIXEL ALCHEMIST', builderId: 'HH26-BLD-55C1', theme: 'pixel' }
+                { id: 1, name: '', role: 'FULL STACK DEV', avatar: '', builderClass: 'THE CHAOS ARCHITECT', builderId: 'HH26-BLD-71E9', theme: 'chaos' },
+                { id: 2, name: '', role: 'UI/UX DESIGNER', avatar: '', builderClass: 'THE PIXEL ALCHEMIST', builderId: 'HH26-BLD-55C1', theme: 'pixel' }
             ]
         };
 
@@ -1186,7 +1186,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="flex flex-col gap-1.5">
                             <label class="font-mono text-[10px] text-textMuted uppercase">Name</label>
-                            <input type="text" value="${member.name}" class="bg-black/30 border border-borderDark focus:border-brandBlue focus:ring-0 text-sm font-semibold rounded-lg text-textLight px-3 py-2 w-full" placeholder="BAVESH" oninput="updateCrewMember(${index}, 'name', this.value)"/>
+                            <input type="text" value="${member.name}" class="bg-black/30 border border-borderDark focus:border-brandBlue focus:ring-0 text-sm font-semibold rounded-lg text-textLight px-3 py-2 w-full" placeholder="ENTER YOUR NAME" oninput="updateCrewMember(${index}, 'name', this.value)"/>
                         </div>
                         <div class="flex flex-col gap-1.5">
                             <label class="font-mono text-[10px] text-textMuted uppercase">Role/Stack</label>
