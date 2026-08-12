@@ -221,7 +221,7 @@
                                     <span class="material-symbols-outlined text-sm">upload_file</span>
                                     <span>Upload File</span>
                                 </button>
-                                <button type="button" class="flex-1 border border-borderDark/60 hover:border-brandCyan/60 bg-cardDark hover:bg-cardDark/85 text-textLight py-3.5 px-4 rounded-xl font-mono text-[11px] uppercase tracking-wider transition-all flex items-center justify-center gap-2" onclick="document.getElementById('camera-upload').click()">
+                                <button type="button" class="flex-1 border border-borderDark/60 hover:border-brandCyan/60 bg-cardDark hover:bg-cardDark/85 text-textLight py-3.5 px-4 rounded-xl font-mono text-[11px] uppercase tracking-wider transition-all flex items-center justify-center gap-2" onclick="openCamera(0)">
                                     <span class="material-symbols-outlined text-sm">photo_camera</span>
                                     <span>Take Photo</span>
                                 </button>
@@ -378,6 +378,51 @@
             <!-- Fast Progress Bar -->
             <div class="w-full h-1 bg-borderDark rounded-full overflow-hidden relative">
                 <div class="h-full bg-gradient-to-r from-brandBlue to-brandCyan animate-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Camera Overlay for Desktop Webcam Capture -->
+    <div id="camera-modal" role="dialog" aria-modal="true" style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100dvh;
+        z-index: 9500;
+        background-color: rgba(6, 7, 10, 0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    ">
+        <div class="absolute inset-0 tech-grid opacity-10 pointer-events-none"></div>
+        <div class="absolute inset-0 noise-overlay pointer-events-none"></div>
+
+        <div class="relative w-full max-w-md bg-cardDark border border-borderDark rounded-2xl p-6 flex flex-col items-center gap-6 shadow-2xl z-10 mx-4">
+            <h3 class="font-sora text-lg font-bold tracking-tight text-textLight uppercase flex items-center gap-2">
+                <span class="material-symbols-outlined text-brandCyan">photo_camera</span>
+                <span>Take Photo</span>
+            </h3>
+            
+            <div class="w-full aspect-square rounded-xl border-2 border-borderDark overflow-hidden bg-black relative flex items-center justify-center">
+                <video id="webcam-preview" autoplay playsinline class="w-full h-full object-cover scale-x-[-1]"></video>
+                <div id="webcam-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-black/85 text-textMuted font-mono text-xs tracking-wider gap-2">
+                    <span class="animate-spin material-symbols-outlined text-brandCyan text-2xl">sync</span>
+                    <span>STARTING CAMERA...</span>
+                </div>
+            </div>
+            
+            <div class="w-full flex gap-3">
+                <button id="camera-cancel-btn" type="button" class="flex-1 border border-borderDark/60 hover:border-red-500/30 hover:text-red-400 bg-black/20 text-textMuted py-3 px-4 rounded-xl font-mono text-xs uppercase tracking-wider transition-all" onclick="closeCameraModal()">
+                    Cancel
+                </button>
+                <button id="camera-capture-btn" type="button" class="flex-1 bg-brandBlue hover:bg-brandCyan text-white font-semibold py-3 px-4 rounded-xl font-mono text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,82,255,0.25)]" onclick="capturePhotoFromWebcam()">
+                    <span class="material-symbols-outlined text-sm">filter_center_focus</span>
+                    <span>Capture</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1201,7 +1246,7 @@
                             <button class="border border-borderDark hover:border-brandBlue/55 bg-black/40 hover:bg-black/70 px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all text-textLight" onclick="document.getElementById('crew-upload-${index}').click()">
                                 UPLOAD PHOTO
                             </button>
-                            <button class="border border-borderDark hover:border-brandCyan/55 bg-black/40 hover:bg-black/70 px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all text-textLight" onclick="document.getElementById('crew-camera-${index}').click()">
+                            <button type="button" class="border border-borderDark hover:border-brandCyan/55 bg-black/40 hover:bg-black/70 px-4 py-2 rounded-lg text-xs font-mono tracking-wider transition-all text-textLight" onclick="openCamera(${index})">
                                 TAKE PHOTO
                             </button>
                             <input id="crew-upload-${index}" type="file" accept="image/*,image/heic" class="hidden" onchange="uploadPhoto(event, ${index})"/>
@@ -2174,6 +2219,111 @@
         function getShareText() {
             const url = getBuilderShareUrl(state.builderId);
             return encodeURIComponent(`I just created my HH Goa 2026 Builder ID. Ready to build something that matters.\n\n${url}\n\n#FrameInGoa`);
+        }
+
+        // Camera Overlay/Webcam Capture logic
+        let activeStream = null;
+        let activeCrewIndex = 0;
+
+        async function openCamera(crewIndex = 0) {
+            hideError();
+            activeCrewIndex = crewIndex;
+
+            // Simple detect mobile to prefer native capture experience
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+                || (navigator.maxTouchPoints > 0 && /Macintosh/i.test(navigator.userAgent));
+
+            if (isMobile) {
+                const inputId = (crewIndex === 0) ? 'camera-upload' : `crew-camera-${crewIndex}`;
+                const fileInput = document.getElementById(inputId);
+                if (fileInput) {
+                    fileInput.click();
+                    return;
+                }
+            }
+
+            // Desktop / Fallback custom webcam modal using getUserMedia
+            const modal = document.getElementById('camera-modal');
+            const video = document.getElementById('webcam-preview');
+            const loading = document.getElementById('webcam-loading');
+            
+            if (!modal || !video) {
+                showError("Camera system not initialized.");
+                return;
+            }
+
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                showError("Camera capture is not supported by your browser or connection. Please upload an image file instead.");
+                return;
+            }
+
+            modal.style.display = 'flex';
+            loading.style.display = 'flex';
+
+            try {
+                const constraints = {
+                    video: {
+                        width: { ideal: 640 },
+                        height: { ideal: 640 },
+                        facingMode: "user"
+                    },
+                    audio: false
+                };
+                
+                activeStream = await navigator.mediaDevices.getUserMedia(constraints);
+                video.srcObject = activeStream;
+                video.onloadedmetadata = () => {
+                    loading.style.display = 'none';
+                };
+            } catch (err) {
+                console.error("Error accessing camera: ", err);
+                closeCameraModal();
+                showError("Unable to access camera. Please verify camera permissions or upload an image file instead.");
+            }
+        }
+
+        function closeCameraModal() {
+            const modal = document.getElementById('camera-modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            if (activeStream) {
+                activeStream.getTracks().forEach(track => track.stop());
+                activeStream = null;
+            }
+            const video = document.getElementById('webcam-preview');
+            if (video) {
+                video.srcObject = null;
+            }
+        }
+
+        function capturePhotoFromWebcam() {
+            if (!activeStream) return;
+
+            const video = document.getElementById('webcam-preview');
+            const canvas = document.createElement('canvas');
+            
+            const size = Math.min(video.videoWidth, video.videoHeight) || 640;
+            canvas.width = size;
+            canvas.height = size;
+            
+            const ctx = canvas.getContext('2d');
+            
+            // Mirror image draw
+            ctx.translate(size, 0);
+            ctx.scale(-1, 1);
+            
+            const sx = (video.videoWidth - size) / 2;
+            const sy = (video.videoHeight - size) / 2;
+            ctx.drawImage(video, sx, sy, size, size, 0, 0, size, size);
+            
+            canvas.toBlob((blob) => {
+                if (blob) {
+                    const file = new File([blob], `camera-capture-${Date.now()}.jpg`, { type: 'image/jpeg' });
+                    processImageFile(file, activeCrewIndex);
+                }
+                closeCameraModal();
+            }, 'image/jpeg', 0.9);
         }
     </script>
 </body>
